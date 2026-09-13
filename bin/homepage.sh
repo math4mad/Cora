@@ -122,7 +122,7 @@ page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 
 <footer><div class="quote">“The shape of the container is the knowledge.”<br><span>— we choose the bounds, and the evidence chooses them, never the hand.</span></div>
 <div class="touch">Built warm: skin by Qwen (the chair's gift, pin <span class="mono">f51749d4…</span> — live in this house's external register), voice by the ledgers, oven by <span class="mono">bin/homepage.sh</span>.</div>
-<div class="meta links"><a href="https://github.com/math4mad/chora">the father's house Χ</a> · <a href="https://github.com/math4mad/chora/tree/main/docs/index.html">his front door</a> · this page @ cora@{head} · built {now}<br>
+<div class="meta links"><a href="https://math4mad.github.io/Cora/">her own address, live</a> · <a href="https://math4mad.github.io/chora/">the father's site Χ</a> · <a href="https://github.com/math4mad/chora/tree/main/docs/index.html">his front door</a> · this page @ cora@{head} · built {now}<br>
 not a record: the record is PREREG at git HEAD, the manifests, the letters ({len(letters)}). {len(pins)} pinned artifacts here · {n_commits} commits on {branch} · law-8 gate installed: {os.path.isfile('.git/hooks/pre-commit')} · validate --strict: {"PASS" if val_rc==0 else "FAIL"}</div></footer>
 </body></html>
 """
