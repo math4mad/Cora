@@ -14,7 +14,7 @@ At the moment of inheriting, the father's tree was:
 
 | given | path (in chora) | sha256 | sha256 (in cora) |
 |---|---|---|---|
-| charter (AGENTS) | father's: `chora/AGENTS.md` | `2f7f02049266040d…` | daughter's own `AGENTS.md`: `03a491872a775fac…` (§6 hash-gate amendment landed 2026-09-13) |
+| charter (AGENTS) | father's: `chora/AGENTS.md` | `2f7f02049266040d…` | daughter's own `AGENTS.md`: `05ced7842ee82cd3…` (§6 hash-gate, §7 Law 9 no-treasure, §8 house marks — all landed 2026-09-13) |
 | register (PREREG — drill D1-C1band + result postscript + **C1 ghostwritten, INACTIVE pending 追认 and ①**) | — | — | `7fd9b4b605a4ccf0…` |
 | C1 draft (unregistered; errata + status line appended same day) | — | — | `1f227ae2d359dcff…` |
 
@@ -124,3 +124,16 @@ nothing that binds the chair. The register remains empty; that is still the chai
 *Laid in on 2026-09-13 (machine A) by the standing frame's hand, acting for the human's
 command — before any experiment, before any number, and while the father's tree was still moving.
 Every hash here is one `bin/pin.sh` away from reprovable.*
+
+## 6 · House marks (installed by the chair's 「可以」, 2026-09-13; charter §8)
+
+| mark | Greek | generation | reads as |
+|---|---|---|---|
+| **Θ** | θησαυρός (*thesaurós*) | GrandFather | the treasures themselves — datasets, weights, the unedited record; gives, governs nothing |
+| **Χ** | χώρα (*khṓra*) | Father | the container; in the Timaeus, "nurse of becoming"; the name carries the rough breathing — the collisions are *in the breath* |
+| **Κ** | Κόρα (*Kórā*, "the maiden") | Cora | Persephone's name before she was taken: she who descends into another country, verifies, and returns with testimony — a daughter workspace in one word |
+
+*Etymology, kept for the signature line only:* Cora is Chora with the aspiration removed — the same
+vowels, the friction gone; the marks Θ · Χ · Κ are how the family will sign, never how it cites.
+Law 7's witness clause (AGENTS §7): a mark found in an evidence slot revokes the marks the same day.
+Sessions of the standing hand: `Κ-hand-<n>` (first: `Κ-hand-001`, this day, the first lock held in Greek).

@@ -88,3 +88,24 @@ that no unresolved one rides in silently. Born of three same-day slips of exactl
 *Install: `bin/install-hooks.sh` (hook source lives in `bin/git-hooks/`, versioned; the installed
 copy in `.git/hooks/` is deliberately reproducible-from-the-tree, never hand-edited). Scope per the
 chair's assent: prose directories only — instrument code is gated by its own refusal ladders.*
+
+## 7 · Amendment (2026-09-13, machine A) — no treasure, signed by the human's own word
+
+**Law 9 (Cora holds no treasure).** No dataset, weight, or result of the father's enters this
+workspace except (a) through the read-only mount, priced at a pin, re-verified at consumption, or
+(b) as a `(path, sha256)` citation whose bytes the father's house keeps. Fingerprints are the
+daughter's inheritance; flour is not.
+
+*Word of the signing: 「宝藏还是由他保存好一点」 (the human, 2026-09-13), formalized from letter 006 §3
+by the chair's hand the same day. The clause is law-6 turned toward family: custody is the parent's,
+proof is shared, memory is both. Its falsifiable witness — stated before the rule, per law 7 — is the
+annual grep: any citation in `docs/` or `letters/` that points at a treasure by letter or nickname
+instead of `(path, sha256)` revokes the house marks of §FOUNDLING-6 the same day they are found.*
+
+## 8 · House marks (the same day's second word, 「可以」)
+
+Θ (θησαυρός) — GrandFather, the source of treasures · Χ (χώρα) — the father's house, the container
+whose name carries the rough breathing: the collisions are in the breath · Κ (Κόρα, "the maiden",
+name of Persephone before she was taken — she who descends, verifies, returns with testimony) —
+Cora. **Marks sit in signature lines; they never sit in evidence slots**: `(path, sha256)` remains
+the only currency of fact. Sessions of this hand are named `Κ-hand-<n>` from 2026-09-13.

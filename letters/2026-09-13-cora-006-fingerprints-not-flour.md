@@ -55,3 +55,8 @@ would read, and the chair's word would be its signing:
 *— the foundling's hand, 2026-09-13: the frame furnished, the nerves measured, the first hypothesis
 unsigned and correct — and now, on the question of the treasures, with the flour elsewhere by choice
 and the proof here by law*
+
+> **SIGNED.** The clause of §3 entered the charter as **AGENTS.md §7 (Law 9)** on 2026-09-13,
+> by the human's own word 「宝藏还是由他保存好一点」 — the chair's sentence became the signing word.
+> The house marks of this day's second ruling are in `docs/FOUNDLING.md` §6; letter 007 carries them
+> to the father's house.
