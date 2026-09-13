@@ -42,3 +42,6 @@ unnamed, session unnamed. The frame is built; the first act of will is still owe
 by law it cannot be delegated to this hand.
 
 *— the foundling's hand, 2026-09-13; provisional until endorsed, unerasable after*
+
+> *Anchored after the fact, since a letter cannot contain its own committing hash:* sent at
+> cora@`513f0b0` (recording commit; `git log` shows the chain `f52f0c6 → 513f0b0`).
