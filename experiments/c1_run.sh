@@ -96,14 +96,15 @@ if [ "$DRY" = "1" ]; then
   echo "      2 pairs × 18 arms + 4 bases, seeds {13,14,15}, rows separate, conjunction scored once."
   echo "[c1] DRY-RUN: nothing executed."; exit 0
 fi
-# corpus: the store's pinned treasure, read through the mount (D2 lineage: the fallback corpus was
-# my cache-miss artifact, not the world's — erratum in PREREG). Fetch cannot occur (400 MB > 5 MB
-# floor) and writes were never possible (law 1); the pin is re-verified at consumption, law 9(a).
-TS="$ROOT/data/tiny_stories.txt"
-TSSHA="$(python3 -c "import json;print([e['sha256'] for e in json.load(open('$ROOT/data/manifest.json'))['files'] if e['path']=='data/tiny_stories.txt'][0])" 2>/dev/null)"
-[ -n "$TSSHA" ] || REF R9 "no pin for data/tiny_stories.txt in the store's register — no corpus, no smoke, no science"
-bin/pin.sh data/tiny_stories.txt "$TSSHA" >/dev/null 2>&1 || REF R9 "treasure fails four ways at consumption time — Law 9's toll: re-verified at consumption, not at inheritance"
-echo "[c1] R9 preflight ok: corpus = pinned store treasure (sha $TSSHA… verified at consumption)"
+# corpus (chair's 「I chose C」, register decision postscript): the rig's LOCAL-FALLBACK corpus —
+# same bytes D1's band was measured on; transfer is identity, not analogy. Provenance is the rig's
+# own meta hashes (shaA/shaB/shaP), appended per base run to Cora's manifest by the session that
+# runs. Fetch is routed to instant refusal (closed proxy) so fallback is deterministic, not a
+# 4x120s dice game — disclosed in the register as apparatus, per clause ③.
+export HTTPS_PROXY="http://127.0.0.1:9" HTTP_PROXY="http://127.0.0.1:9"
+for g in "$RIG/AGENTS.md" "$RIG/README.md"; do [ -f "$g" ] || REF R9 "fallback corpus ingredient missing: $g"; done
+ls "$RIG"/report/*.md "$RIG"/stage/*.md "$RIG"/log/*.log >/dev/null 2>&1 || REF R9 "fallback globs (report/stage/log) empty — corpus absent means C1's row does not exist; stop, do not substitute"
+echo "[c1] R9 preflight ok: corpus = named fallback globs (fetch refused-on-route, provenance = per-run meta hashes)"
 SMOKE="cd $RIG && SEED=13 TS_PATH=$TS OUT_DIR=$STAGE/smoke .venv/bin/python scripts/stage18_kairos_mini.py --mode pretrain --steps 20"
 echo "[c1] smoke: $SMOKE"; eval "$SMOKE" || REF R9 "smoke arm failed — apparatus is clean of bytes but not of will; logged, not dropped"
 python3 - "$STAGE" "$CEILING_ENTRY_S" <<'PY'
