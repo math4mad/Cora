@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# CORA pre-commit — Law 8, the hash gate. Source of truth; installed by bin/install-hooks.sh.
+# Scope by the chair's assent: commits touching docs/ or letters/. Not a law for code: code that
+# gates is gated by its own refusals (experiments/README.md).
+set -uo pipefail
+ROOT="$(git rev-parse --show-toplevel)"
+STAGED="$(git diff --cached --name-only | grep -E '^(docs|letters)/' || true)"
+[ -n "$STAGED" ] || exit 0
+echo "[hook] law 8: hash gate over $(echo "$STAGED" | wc -l | tr -d ' ') prose file(s)…"
+"$ROOT/bin/hash-audit.sh" || { echo "[hook] BLOCKED — resolve or mark 'unresolved' on the line, then retry (see AGENTS.md §6)"; exit 1; }
+exit 0

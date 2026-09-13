@@ -79,3 +79,19 @@ before anything may cite it.
 _None yet._ The frame is furnished up to this line and no further: **the first entry is the human's
 to ask for, or a seat's to propose** — see `PREREG-C1-draft.md` for a candidate that is deliberately
 **not registered** here, so that nothing in this file predates an act of will.
+
+**Postscript D1-C1band, run day (2026-09-13, appended per law 4 — the entry is never edited):**
+BAND = **0.003158 nats** (max over arms of across-replicate spread; n=3, machine A, seed 13,
+`MEF@382e438a…`). Citable: `artifacts/results/D1-C1band_band.json` `86cce6228634b62e…`, curve
+twins pinned alongside. **The obituary branch did not fire**: same-seed band (0.0032) sits ~9× under
+Gate 6's cross-machine floor (0.0289) — the rig is what the father's records said it is, and C1 may
+keep same-seed replicates within the drafted budget. Two readings reported, not smoothed:
+① `k100` (frozen base, eval-only) spread is **exactly 0.0** — nondeterminism rides the training
+path, not the evaluation; ② spread grows monotonically with k on training arms (1e-6 → 3.2e-3) —
+which is *about the apparatus* and earns no hypothesis any rights. Corrections #1–#3 (TS_PATH
+boundary fix, per-rep ladder, inoperative WINDOW) are in the commits, all pre-band, none after a
+reading; the run's own first failure (rep sweeps without ladder files) is theirs too.
+**Precondition ② of the C1 draft is met.** ① (endorsement resolves to nothing — father has pinned
+5/6 founding docs, the review stays unmanifested, deliberately?) and ③ (named curve file, belongs to
+the C1 entry itself) remain open. Wall clock: ~7.5 min measured vs ~9.1 min budget — father's units
+held, now also printed by Cora herself.

@@ -14,11 +14,17 @@ At the moment of inheriting, the father's tree was:
 
 | given | path (in chora) | sha256 | sha256 (in cora) |
 |---|---|---|---|
-| charter (AGENTS) | father's: `chora/AGENTS.md` | `2f7f02049266040d…` | daughter's own `AGENTS.md`: `4c098f85a735e013…` |
-| register (PREREG — no predictions; carries drill D1-C1band since 2026-09-13) | — | — | `aa4db3f281e11cf8…` |
-| C1 draft (unregistered; erratum + follow-through appended same day) | — | — | `28a8cc91ac78e0a8…` |
+| charter (AGENTS) | father's: `chora/AGENTS.md` | `2f7f02049266040d…` | daughter's own `AGENTS.md`: `03a491872a775fac…` (§6 hash-gate amendment landed 2026-09-13) |
+| register (PREREG — no predictions; drill D1-C1band with run-day postscript) | — | — | `8bcd7acd09dab064…` |
+| C1 draft (unregistered; errata + status line appended same day) | — | — | `1f227ae2d359dcff…` |
 
-*These two rows were caught stale by `bin/hash-audit.sh --file` on the day this file was written —
+*These rows have now gone stale **twice** and been re-anchored by `bin/hash-audit.sh --file
+docs/FOUNDLING.md`; between the two incidents the drift came from appending the D1 run-day
+postscript and the charter's §6 amendment — i.e. from *more law and more result*, not from sloppiness.
+A self-citing table in a living workspace is a weather vane: fine, as long as somebody reads it every
+day before claiming anything from it.*
+
+*These rows were first caught stale by `bin/hash-audit.sh --file` on the day this file was written —
 the register had already gained its drill entry and the draft its erratum, after the hashes above
 were first set. **A hash is a claim about bytes at a moment**; a self-recorded table in a living
 workspace goes stale by construction. Standing rule adopted for this file: re-run
@@ -82,6 +88,12 @@ at inheritance — which is what `bin/pin.sh` is for. (This is what the README m
   validator over empty manifests proves nothing. When it lands it must carry the C5 reverse clause
   from day one (the father's first run of that script found three tracked files with no pin; that
   finding is part of the inheritance).
+  **TRIGGER FIRED 2026-09-13:** `artifacts/results/` now holds four real pinned entries (the D1 band
+  and its curve twins). The port is owed — with one Cora-side addition: it must ALSO check the
+  forward direction for `staging/` (bytes that exist under artifacts/ but are git-ignored and
+  unmanifested are the father's E0 class in embryo; staging is allowed to be ignored ONLY while
+  every file in it has a citable twin or an explicit absence note — the D1 twins were made twins
+  the same hour the band printed, and that ordering is the rule).
 * A release/publish pipeline — none until there is something to publish.
 * Minutes, seats, correspondence — `letters/`, `meetings/` and `docs/LETTERS/` exist and are empty.
   This file and the frame commit are the only founding records until a human names a session.

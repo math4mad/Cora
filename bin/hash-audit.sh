@@ -211,7 +211,9 @@ def looks_like_param(tok, line):
     number-in-prose (7.880, a step count) than a hash; anything containing a-f is always a claim."""
     return bool(re.fullmatch(r"[0-9]+", tok))
 
-GIT_RE = re.compile(r"\b[0-9a-f]{7,40}\b|\b[0-9a-f]{64}\b")
+GIT_RE = re.compile(r"\b[0-9a-f]{7,}\b")  # any run of 7+ hex: the {7,40}|{64} pair left 41..63 blind —
+# found by a test token of exactly 56 hex slipping the gate while the gate itself fired correctly.
+# A claim may be truncated by an ellipsis anywhere; the matcher may not have gaps of its own.
 added_lines = added.splitlines()
 seen_tokens = sorted(set(GIT_RE.findall(added)))
 ok, bad, skipped = 0, [], 0

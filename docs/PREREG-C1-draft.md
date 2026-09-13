@@ -104,3 +104,8 @@ it: either the chair produces the bytes it was read from (then: pin them, and th
 stand), or Chora pins `Qwen-sencond-round-review.md` (`9ebc7ed1…`, letter 002 §4) and precondition ①
 is rewritten to point at that. Until one of the two happens, this draft's endorsement clause is
 **open debt**, and `bin/hash-audit.sh` will keep refusing to let it read as verified.
+
+**Status line, 2026-09-13 (append-only):** precondition ② **met by drill D1-C1band** — band
+0.003158 nats, pinned at `artifacts/results/D1-C1band_band.json` `(sha256
+86cce6228634b62e390426784a8ef457054a6a967e1d233592134d6f475b42eb)`, register postscript carries the
+readings. ① and ③ still open; the draft remains unregistered.

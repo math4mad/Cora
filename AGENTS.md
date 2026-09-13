@@ -73,3 +73,18 @@ bin/pin.sh          verify a (path, sha256) claim against Chora's manifests AND 
 
 *Charter set 2026-09-13, machine A, by the human's word 「为 Cora 建一座大厦吧」 and the chair's hand.
 The frame is built; no room is furnished until a pre-registration lives in it.*
+
+## 6 · Amendment (2026-09-13, machine A) — the hash gate, named law by the chair's 「做吧」
+
+**Law 8 (no hash enters prose unverified).** Every commit that adds or edits a file under `docs/` or
+`letters/` must first pass `bin/hash-audit.sh` on its staged diff: every hash-shaped token is
+either (a) resolvable at that moment — a manifest pin, a git object in a known repo, or a computed
+file hash in this session's ledger (`bin/hash-audit.sh --record <rev>`) — or (b) carrying the
+line-scoped marker `unresolved`, which converts a claim into a visible debt, printed at every run.
+The gate is *not* a truth machine: it cannot say a resolved hash is used meaningfully; it says only
+that no unresolved one rides in silently. Born of three same-day slips of exactly this class
+(`docs/FOUNDLING.md` §3 note, letters 002–003 errata) — the amendment is the scar of its own making.
+
+*Install: `bin/install-hooks.sh` (hook source lives in `bin/git-hooks/`, versioned; the installed
+copy in `.git/hooks/` is deliberately reproducible-from-the-tree, never hand-edited). Scope per the
+chair's assent: prose directories only — instrument code is gated by its own refusal ladders.*
