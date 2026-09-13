@@ -150,3 +150,11 @@ scale, and the entry's ceiling doubles. Fix, pre-signed: **the C1 run script mus
 (20 steps) first, price the run in those measured units, and refuse to continue if the printed
 ceiling exceeds this entry's ceiling ×2.** Corpus of every run recorded via the rig's meta.json
 shaA/shaB/shaP, which D1 already proved it writes.
+
+**Ratified:** 2026-09-13, machine A — the chair's word 「confirm」 (κυροῦν, *the first exercise of
+Ζ's office in this register*), by the chair; scribe `Κ-hand-004` under the chair's instruction of
+the same hour ("代笔亦可,字必须真是那个字" — hence this line quotes the word itself, not a
+translation of it). The GHOSTWRITTEN/INACTIVE header above stands as the historical fact of
+authorship and is not edited. Activation now waits on **exactly one** condition: ①, the father's
+pin (runner gate R3). Until then this entry is law for the frame and dead for the bench —
+which is, per article II, the whole point.

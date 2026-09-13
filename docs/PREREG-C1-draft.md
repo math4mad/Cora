@@ -109,3 +109,8 @@ is rewritten to point at that. Until one of the two happens, this draft's endors
 0.003158 nats, pinned at `artifacts/results/D1-C1band_band.json` `(sha256
 86cce6228634b62e390426784a8ef457054a6a967e1d233592134d6f475b42eb)`, register postscript carries the
 readings. ① and ③ still open; the draft remains unregistered.
+
+**Status line, 2026-09-13 (second, append-only):** registered as C1 by the chair's 「由您代笔」 and
+**ratified** the same day by the chair's 「confirm」 (scribe-line `Κ-hand-004` in the register).
+① remains the only open precondition; ② band pinned, ③ curve files named in-entry, ④ scar re-check
+landed with the D1 readings.
