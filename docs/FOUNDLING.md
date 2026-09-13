@@ -15,8 +15,15 @@ At the moment of inheriting, the father's tree was:
 | given | path (in chora) | sha256 | sha256 (in cora) |
 |---|---|---|---|
 | charter (AGENTS) | father's: `chora/AGENTS.md` | `2f7f02049266040d…` | daughter's own `AGENTS.md`: `4c098f85a735e013…` |
-| register (PREREG, empty by design) | — | — | `159975d81d44b76c…` |
-| C1 draft (unregistered on purpose) | — | — | `d1364b76f1a08838…` |
+| register (PREREG — no predictions; carries drill D1-C1band since 2026-09-13) | — | — | `aa4db3f281e11cf8…` |
+| C1 draft (unregistered; erratum + follow-through appended same day) | — | — | `28a8cc91ac78e0a8…` |
+
+*These two rows were caught stale by `bin/hash-audit.sh --file` on the day this file was written —
+the register had already gained its drill entry and the draft its erratum, after the hashes above
+were first set. **A hash is a claim about bytes at a moment**; a self-recorded table in a living
+workspace goes stale by construction. Standing rule adopted for this file: re-run
+`bin/hash-audit.sh --file docs/FOUNDLING.md` after touching ANY document it cites (the phantom
+`6d1b7210b80b4a7e…` stays flagged, marked unresolved on purpose — it is evidence, not a typo).*
 | manifest schema | `schemas/manifest.schema.json` | `a4a7cf93382fb0b460f485c9903f327fcace79e43541adf151b6827f2d521a0a` | **identical, verified** |
 | writer lock (instrument) | `bin/writelock.sh` | `f4aaa920d89444121817193e4850794046db023f73eff30a813a839c97d5792b` | ported to `bin/writelock.sh`, only lock-name & header differ |
 | store sync (pattern) | `bin/sync.sh` | `013a9bcefda59058bb3c4c778421333d3a696ac5208bff0672926c9cf7520191` | rewritten: Cora's mounts the father's store, not the benches' |

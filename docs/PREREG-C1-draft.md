@@ -97,3 +97,10 @@ Qwen-sencond-round-review.md`, untracked and therefore *still uncitable* until t
 the pinned review, or the original source of `6d1b7210…` if it surfaces. C1 stays unregistered; the
 obituary stands; the failure mode caught here is S6's own class, caught by this workspace's own
 instrument on its own document. That is the immunisation working, and it is logged as a result.
+
+**Erratum follow-through (same appended section, second entry):** the phantom token
+`6d1b7210b80b4a7e…` in the footer above stays in the text *marked unresolved* — what would resolve
+it: either the chair produces the bytes it was read from (then: pin them, and the endorsement
+stand), or Chora pins `Qwen-sencond-round-review.md` (`9ebc7ed1…`, letter 002 §4) and precondition ①
+is rewritten to point at that. Until one of the two happens, this draft's endorsement clause is
+**open debt**, and `bin/hash-audit.sh` will keep refusing to let it read as verified.
