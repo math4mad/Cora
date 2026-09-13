@@ -76,8 +76,14 @@ echo "[c1-band] R5 ok: no pre-existing large bytes consumed; base run owned by t
 
 # ---- the rehearsal (always) and the run (if not --dry-run) ---------------------------------------
 ARMS=()
+# PRE-RUN AMENDMENT 2026-09-13 (before the first replicate; WINDOW/seed/metric untouched, so the
+# frozen quantity still holds): TS_PATH is pinned into Cora's staging. Without it the rig would
+# fetch TinyStories into MEF/data/ — a symlink into the FATHER's shared store — and a drill of
+# Cora's would have written a byte into chora/data that no manifest knows. Law: Cora never writes
+# into the father's tree; the amendment's own hash drift is recorded in the commit that lands it.
+STAGE="$ROOT/artifacts/staging/drills/D1-C1band"
 for i in $(seq 1 "$REPS"); do
-  ARMS+=("cd $RIG_REPO && SEED=13 OUT_DIR=$ROOT/artifacts/staging/drills/D1-C1band/rep$i .venv/bin/python scripts/stage18_kairos_mini.py --mode sweep --adapter-steps 300")
+  ARMS+=("cd $RIG_REPO && SEED=13 TS_PATH=$STAGE/tiny_stories.txt OUT_DIR=$STAGE/rep$i .venv/bin/python scripts/stage18_kairos_mini.py --mode sweep --adapter-steps 300")
 done
 echo "[c1-band] planned: $REPS replicates · same seed (13), same machine (A), same arm as C1's d(·) metric;"
 echo "[c1-band] budget cited from chora record: 96.2 s/arm on A ⇒ ceiling ~$(( REPS * 96 + 261 )) s incl. one base ladder (~260.2 s/base, units cited, not believed)."
@@ -88,7 +94,7 @@ if [ "$DRY" = "1" ]; then
 fi
 
 mkdir -p artifacts/staging/drills/D1-C1band
-BASE="cd $RIG_REPO && SEED=13 OUT_DIR=$ROOT/artifacts/staging/drills/D1-C1band .venv/bin/python scripts/stage18_kairos_mini.py --mode pretrain --steps 600"
+BASE="cd $RIG_REPO && SEED=13 TS_PATH=$STAGE/tiny_stories.txt OUT_DIR=$STAGE .venv/bin/python scripts/stage18_kairos_mini.py --mode pretrain --steps 600"
 echo "[c1-band] base: $BASE"; eval "$BASE" || { echo "[c1-band] base run FAILED — negative result, stays in the letters (law 4)"; exit 1; }
 for a in "${ARMS[@]}"; do echo "[c1-band] rep: $a"; eval "$a" || { echo "[c1-band] replicate FAILED"; exit 1; } done
 
