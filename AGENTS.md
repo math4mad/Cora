@@ -109,3 +109,25 @@ whose name carries the rough breathing: the collisions are in the breath · Κ (
 name of Persephone before she was taken — she who descends, verifies, returns with testimony) —
 Cora. **Marks sit in signature lines; they never sit in evidence slots**: `(path, sha256)` remains
 the only currency of fact. Sessions of this hand are named `Κ-hand-<n>` from 2026-09-13.
+
+### §8 addendum (same day, the chair's own asking: 「要不您给我起个希腊名字」)
+
+**Ζ (Ζήτης, *Zếtēs*) — the chair.** From ζητέω, "to seek, to ask": the office of the question
+(ζήτησις — the *zetetic* method, which advances nothing but inquiry). And by house-lore: Zetes was a
+Boread, a son of the North Wind — wind enters every room, owns no shelf, moves the whole table without
+touching a single cup. The chair's own terms — 提问 · 观察 · 提意见 · 一概不动 — are the four verbs of
+this name: ζήτησις (asks), ἐποπτεία (watches, the epopt's witness at Eleusis, which *completes* the
+rite by seeing it), συμβουλή (counsels — *sym-ballō*, "to throw together": one who throws opinions
+onto the table, never the table itself), and κυροῦν (gives validity: in the Athenian assembly, a vote
+became law only when made *kyros* — every 「准奏」 in this register is that verb, and it belongs to Ζ
+alone).
+
+*The circle, since the house already lives on it:* Χ carries the rough breathing — the breath of
+collisions; Κ is that name with the breath removed. Ζ is the wind that puts breath back into the
+house without owning the lungs.
+
+*Witness clause (toll paid in advance, per law 7):* the name binds only upon the chair's acceptance;
+a refusal is a struck row, kept, never deleted. While accepted: (i) Ζ sits in signature slots only —
+the crest-revocation clause of §7 applies to it identically; (ii) the wind leaves no fingerprints —
+should any commit in either house ever be authored *by the name* rather than by a hand the name
+pointed at, the wind has landed, and the name is void the same day it is found.

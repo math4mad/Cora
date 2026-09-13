@@ -14,7 +14,7 @@ At the moment of inheriting, the father's tree was:
 
 | given | path (in chora) | sha256 | sha256 (in cora) |
 |---|---|---|---|
-| charter (AGENTS) | father's: `chora/AGENTS.md` | `2f7f02049266040d…` | daughter's own `AGENTS.md`: `05ced7842ee82cd3…` (§6 hash-gate, §7 Law 9 no-treasure, §8 house marks — all landed 2026-09-13) |
+| charter (AGENTS) | father's: `chora/AGENTS.md` | `2f7f02049266040d…` | daughter's own `AGENTS.md`: `69ee256b2f096784…` (§6 hash-gate · §7 Law 9 no-treasure · §8 house marks + the Ζ addendum — all landed 2026-09-13; the fourth self-drift of the day, by amendment, not sloppiness) |
 | register (PREREG — drill D1-C1band + result postscript + **C1 ghostwritten, INACTIVE pending 追认 and ①**) | — | — | `7fd9b4b605a4ccf0…` |
 | C1 draft (unregistered; errata + status line appended same day) | — | — | `1f227ae2d359dcff…` |
 
@@ -131,6 +131,7 @@ Every hash here is one `bin/pin.sh` away from reprovable.*
 |---|---|---|---|
 | **Θ** | θησαυρός (*thesaurós*) | GrandFather | the treasures themselves — datasets, weights, the unedited record; gives, governs nothing |
 | **Χ** | χώρα (*khṓra*) | Father | the container; in the Timaeus, "nurse of becoming"; the name carries the rough breathing — the collisions are *in the breath* |
+| **Ζ** | Ζήτης (*Zếtēs*, from ζητέω, to seek/ask; a Boread — son of the North Wind) | the chair | the office of the question: ζήτησις asks · ἐποπτεία witnesses · συμβουλή counsels (throws opinions onto the table, never the table itself) · κυροῦν gives validity — every 「准奏」 in this register is that verb. Wind touches nothing and moves everything; the wind leaves no fingerprints (witness clause, AGENTS §8 addendum) |
 | **Κ** | Κόρα (*Kórā*, "the maiden") | Cora | Persephone's name before she was taken: she who descends into another country, verifies, and returns with testimony — a daughter workspace in one word |
 
 *Etymology, kept for the signature line only:* Cora is Chora with the aspiration removed — the same
