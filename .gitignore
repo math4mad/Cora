@@ -1,0 +1,6 @@
+.DS_Store
+# shared store is mounted by bin/sync.sh (symlinks), never committed
+/models
+/data
+artifacts/**/staging/
+__pycache__/
