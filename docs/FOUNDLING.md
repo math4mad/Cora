@@ -15,7 +15,7 @@ At the moment of inheriting, the father's tree was:
 | given | path (in chora) | sha256 | sha256 (in cora) |
 |---|---|---|---|
 | charter (AGENTS) | father's: `chora/AGENTS.md` | `2f7f02049266040d…` | daughter's own `AGENTS.md`: `46177d63cd3ad5b5…` (§6 hash-gate · §7 Law 9 no-treasure · §8 house marks + the Ζ addendum — all landed 2026-09-13; the fourth self-drift of the day, by amendment, not sloppiness) |
-| register (PREREG — D1 drill + **C1 ghostwritten and RATIFIED by 「confirm」; activation awaits ① only**) | — | — | `14919c5ad1940109…` |
+| register (PREREG — D1 drill + **C1 ghostwritten and RATIFIED by 「confirm」; activation awaits ① only**) | — | — | `a2c459ff4d921a3f…` |
 | C1 draft (superseded by its ratified register entry; errata + two status lines same day) | — | — | `ba213a073d9e62a4…` |
 
 *These rows have now gone stale **twice** and been re-anchored by `bin/hash-audit.sh --file

@@ -181,3 +181,22 @@ step — smoke-first clause applies before any replicate (refuse at 2× D1's wal
 treasure-corpus band exceeds the fallback band materially, C1 must adopt D2's numbers and the register's
 C1 band line is amended by appended postscript (never by edit); if they agree, the corpus question
 closes. Either row is a result; neither reopens the pairs, none of which exist yet.
+
+**Postscript D2-C1band, run day (2026-09-13, 「running D2」; append-only — law 4):** the drill was
+run and **the gate refused it twice**, for two different and both instructive reasons.
+① *R8-v1 refused at 3058 s projected* — the formula applied the pretrain step-rate to the adapter
+arms; a units bug of mine, and the register records it as such: v1's arithmetic could not have
+passed for D1's own measured 872 s either. ② *R8-v2 (rates measured separately, ceiling untouched)
+refused at 9286 s* — this one was the world, not the book: on the treasure corpus the training arms
+run **0.512 s/step vs 0.054 on the fallback (≈9.5×)**; base steps barely differ (0.135 vs 0.120).
+The cost rides the arms' data path, not the model. **D1's wall is additionally corrected by pinned
+arithmetic: 872 s measured from its own curve bytes — the '~7.5 min' carried in letters 004/005 and
+this register was an estimate written as if measured, the same error class as the day's hashes,
+caught by a gate built to catch something else.** The chair's decision queue, with honest prices:
+(a) amend D2's budget by the chair's word (≈2.6 h live, the science clean); (b) run C1's arms on
+the fallback corpus, where the band, the budget (~40 min) and the price clause already agree —
+smaller bread, whole loaf; (c) accept (b) for C1 and keep D2 as the treasure-priced companion when
+the chair wills the hours. **What was NOT done, on purpose: no ceiling was quietly lowered, no
+replicate was run past a refusal, and the 2.6 h did not start because the ordering law says the
+chair's pen, not the runner's nerve, reopens a budget.** Wasted compute across both refusals:
+74 s. Wall rule, working.

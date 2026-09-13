@@ -13,3 +13,8 @@ drills/D1-C1band/eval_A.pt              # eval tensors from the same base run
 drills/D1-C1band/eval_B.pt              # "
 drills/D1-C1band/eval_P.pt              # "
 drills/D1-C1band/rep                    # per-replicate dirs: symlinks into the ladder above (no new bytes) + curve jsons, which DO have pinned twins (f5869551…, d7b1ec5d…, 68e154dd…)
+drills/D2-C1band/ceiling.txt           # computed from D1's pinned curves by the d2 script; deterministic re-derivation
+drills/D2-C1band/smoke                  # 20-step smoke base (jsons reproducible from script@HEAD + SEED=13 + pinned corpus; no result-data lives here — the run it gates was refused)
+drills/D2-C1band/base_run.json          # (from smoke only; full ladder never built — gate refused before spend)
+drills/D2-C1band/ckpt_
+drills/D2-C1band/eval_
