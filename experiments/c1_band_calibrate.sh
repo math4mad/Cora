@@ -94,9 +94,25 @@ if [ "$DRY" = "1" ]; then
 fi
 
 mkdir -p artifacts/staging/drills/D1-C1band
+# second pre-run lesson (first live failure of the live run, logged per law 4): the rig's sweep
+# mode reads base_run.json from its OWN OUT_DIR — a per-rep OUT_DIR must carry the ladder. The
+# ladder is linked, not copied: same bytes, one owner (this drill), zero duplicate claims.
+LADDER="$STAGE"
 BASE="cd $RIG_REPO && SEED=13 TS_PATH=$STAGE/tiny_stories.txt OUT_DIR=$STAGE .venv/bin/python scripts/stage18_kairos_mini.py --mode pretrain --steps 600"
-echo "[c1-band] base: $BASE"; eval "$BASE" || { echo "[c1-band] base run FAILED — negative result, stays in the letters (law 4)"; exit 1; }
-for a in "${ARMS[@]}"; do echo "[c1-band] rep: $a"; eval "$a" || { echo "[c1-band] replicate FAILED"; exit 1; } done
+if [ -f "$STAGE/base_run.json" ]; then
+  echo "[c1-band] base: ladder already in staging from this drill's earlier attempt — reusing (same seed, same bytes claimed only if they hash-match; hashes recorded below)"
+else
+  echo "[c1-band] base: $BASE"; eval "$BASE" || { echo "[c1-band] base run FAILED — negative result, stays in the letters (law 4)"; exit 1; }
+fi
+for a in "${ARMS[@]}"; do
+  RDIR="$(echo "$a" | sed -n 's/.*OUT_DIR=\([^ ]*\).*/\1/p')"
+  mkdir -p "$RDIR"
+  for f in base_run.json ckpt_k0.pt ckpt_k25.pt ckpt_k50.pt ckpt_k75.pt ckpt_k100.pt eval_A.pt eval_B.pt eval_P.pt; do
+    [ -f "$LADDER/$f" ] && ln -sf "$LADDER/$f" "$RDIR/$f"
+  done
+  [ -f "$LADDER/base_run.json" ] || { echo "[c1-band] base ladder missing — run base first"; exit 1; }
+  echo "[c1-band] rep: $a"; eval "$a" || { echo "[c1-band] replicate FAILED"; exit 1; }
+done
 
 python3 - "$ROOT" <<'PY'
 import glob, hashlib, json, os, sys
