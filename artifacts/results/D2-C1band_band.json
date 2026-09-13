@@ -1,0 +1,63 @@
+{
+ "drill": "D2-C1band",
+ "corpus": "data/tiny_stories.txt via mount (pinned, four-ways verified at consumption)",
+ "reps_replicated": 3,
+ "arms_usable": 5,
+ "metric": "identical to D1 correction #3",
+ "band_nats": 0.002306,
+ "d1_band_nats": 0.003158,
+ "ratio_vs_d1": 0.7302,
+ "verdict_rule": "D2 adopts over D1 if band > 2\u00d7 D1 (register wording: 'materially exceeds'); this script prints, the chair's register postscript decides",
+ "per_arm": {
+  "k0r8": {
+   "n": 3,
+   "spread": 1e-06,
+   "decays": [
+    0.538879,
+    0.538878,
+    0.538879
+   ]
+  },
+  "k25r8": {
+   "n": 3,
+   "spread": 0.000883,
+   "decays": [
+    0.065859,
+    0.066679,
+    0.065796
+   ]
+  },
+  "k50r8": {
+   "n": 3,
+   "spread": 0.002306,
+   "decays": [
+    0.026693,
+    0.026965,
+    0.024659
+   ]
+  },
+  "k75r8": {
+   "n": 3,
+   "spread": 0.000503,
+   "decays": [
+    0.020253,
+    0.019889,
+    0.01975
+   ]
+  },
+  "k100r8": {
+   "n": 3,
+   "spread": 0.0,
+   "decays": [
+    0.016124,
+    0.016124,
+    0.016124
+   ]
+  }
+ },
+ "curve_inputs": {
+  "artifacts/staging/drills/D2-C1band/rep1/sweep_sched_a.json": "03ec855314afb8ee05cc97e9c62128707637256b729f92a00a7691e37d5676fd",
+  "artifacts/staging/drills/D2-C1band/rep2/sweep_sched_a.json": "f3b2b7144275faeff4ee6837922cb97946d355466bec7fee6b635dd2c2de19ad",
+  "artifacts/staging/drills/D2-C1band/rep3/sweep_sched_a.json": "de98191ed5ed4d4a17e88baca2d95150329cdc36dd374091717de52933a91a3f"
+ }
+}

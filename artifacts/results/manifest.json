@@ -39,6 +39,46 @@
    "by": "cora@c9afe68 (session cora-hand-D1-run, chair's \u300c\u505a\u5427\u300d)",
    "script": "experiments/c1_band_calibrate.sh (--reparse path)",
    "notes": "FIRST NUMBER IN CORA: band 0.003158 nats; obituary branch not fired (<0.03); k100 spread exactly 0 \u2014 nondeterminism rides the training path; C1's precondition \u2461 is now met, cite (path, sha256)"
+  },
+  {
+   "path": "artifacts/results/D2-C1band/rep1.sweep_sched_a.json",
+   "sha256": "03ec855314afb8ee05cc97e9c62128707637256b729f92a00a7691e37d5676fd",
+   "bytes": 7508,
+   "source": "byte-twin of D2 staging replicate curve (rig MEF@382e438a, SEED=13, corpus=data/tiny_stories.txt pinned 24278817\u2026, machine A)",
+   "obtained": "2026-09-13",
+   "by": "cora@0986906 (session \u039a-hand-008, chair's \u300c\u8dd1\u5427\u3002\u65f6\u95f4\u4e4b\u7bad\u6c38\u8fdc\u5411\u524d\u300d)",
+   "script": "experiments/d2_band_calibrate.sh",
+   "notes": "D2 treasure-corpus replicate 1; band inputs; corpus provenance per base_run meta"
+  },
+  {
+   "path": "artifacts/results/D2-C1band/rep2.sweep_sched_a.json",
+   "sha256": "f3b2b7144275faeff4ee6837922cb97946d355466bec7fee6b635dd2c2de19ad",
+   "bytes": 7510,
+   "source": "byte-twin of D2 staging replicate curve (rig MEF@382e438a, SEED=13, corpus=data/tiny_stories.txt pinned 24278817\u2026, machine A)",
+   "obtained": "2026-09-13",
+   "by": "cora@0986906 (session \u039a-hand-008, chair's \u300c\u8dd1\u5427\u3002\u65f6\u95f4\u4e4b\u7bad\u6c38\u8fdc\u5411\u524d\u300d)",
+   "script": "experiments/d2_band_calibrate.sh",
+   "notes": "D2 treasure-corpus replicate 2; band inputs; corpus provenance per base_run meta"
+  },
+  {
+   "path": "artifacts/results/D2-C1band/rep3.sweep_sched_a.json",
+   "sha256": "de98191ed5ed4d4a17e88baca2d95150329cdc36dd374091717de52933a91a3f",
+   "bytes": 7516,
+   "source": "byte-twin of D2 staging replicate curve (rig MEF@382e438a, SEED=13, corpus=data/tiny_stories.txt pinned 24278817\u2026, machine A)",
+   "obtained": "2026-09-13",
+   "by": "cora@0986906 (session \u039a-hand-008, chair's \u300c\u8dd1\u5427\u3002\u65f6\u95f4\u4e4b\u7bad\u6c38\u8fdc\u5411\u524d\u300d)",
+   "script": "experiments/d2_band_calibrate.sh",
+   "notes": "D2 treasure-corpus replicate 3; band inputs; corpus provenance per base_run meta"
+  },
+  {
+   "path": "artifacts/results/D2-C1band_band.json",
+   "sha256": "3acc619bc2a768b1f7b363029a0cfd256e4fa05f64845b3c4aeb64b627c375f5",
+   "bytes": 1429,
+   "source": "computed from the three pinned D2 curves; metric identical to D1 correction #3",
+   "obtained": "2026-09-13",
+   "by": "cora@0986906 (session \u039a-hand-008, chair's \u300c\u8dd1\u5427\u3002\u65f6\u95f4\u4e4b\u7bad\u6c38\u8fdc\u5411\u524d\u300d)",
+   "script": "experiments/d2_band_calibrate.sh",
+   "notes": "TREASURE BAND 0.002306 nats \u2014 LOWER than fallback D1 (0.73x); D1 band stands as the conservative one; C1 needs no adoption; obituary's 'materially exceeds' branch NOT fired"
   }
  ]
 }

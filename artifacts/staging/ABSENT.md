@@ -18,3 +18,7 @@ drills/D2-C1band/smoke                  # 20-step smoke base (jsons reproducible
 drills/D2-C1band/base_run.json          # (from smoke only; full ladder never built — gate refused before spend)
 drills/D2-C1band/ckpt_
 drills/D2-C1band/eval_
+drills/D2-C1band/base_run.json          # treasure-corpus base ladder: reproducible (script@HEAD, SEED=13, pinned corpus) — law 6 keeps bytes out of git
+drills/D2-C1band/ckpt_                  # ladder checkpoints (prefix line)
+drills/D2-C1band/eval_                  # eval tensors from the same base
+drills/D2-C1band/rep                    # per-rep symlinks + curve jsons whose twins are pinned above

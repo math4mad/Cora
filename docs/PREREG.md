@@ -228,3 +228,20 @@ forward — whichever branch the obituary names (treasure-band materially exceed
 numbers adopt; else fallback band stands), neither writes the other down, and the result — whatever
 it is — gets pinned into the register's D2 block before anything cites it. The refusals are not
 erased; they are why this line exists.
+
+**Postscript D2-C1band, RESULT (2026-09-13, run night; the chair's 「跑吧。时间之箭永远向前」 is
+the order this row answers; append-only):** **treasure-corpus band = 0.002306 nats** — the arrow
+spent ~20 minutes, not 2.6 hours, and it came back **cheaper than the fallback band it was meant
+to replace: 0.73× D1** (per-arm: k0 1.4e-5 · k25 8.8e-4 · k50 2.3e-3 · k75 5.0e-4 · **k100 exactly
+0 again** — determinism rides evaluation on *both* corpora, a cross-corpus replication of D1's
+sharpest single reading). **The obituary's "materially exceeds" branch did not fire — nothing is
+adopted; D1's 0.003158 stands as the conservative band C1 already cites; C1 stays on its small
+loaf with a *strengthened* price clause** (its budget now carries a measured lower bound from the
+treasure corpus for free). Pinned: `artifacts/results/D2-C1band_band.json` `(sha256
+3acc619bc2a768b1…)` + three curve twins, four-way green after commit. **Erratum #4 of the day, and
+the same arithmetic twice makes a pattern:** the pre-spend projection of 9434 s over-counted the
+arms 45-vs-15 (my formula's third cousin of the units bug and the estimate-as-measurement) — the
+register's *budget-revision* line read from the estimate, so the overestimate was load-bearing for
+the chair's 3 h; tonight it proved a 3× margin of self-distrust is not waste but insurance: the
+arrow moved forward *inside* a budget whose arithmetic was honestly wrong, and the science is
+untouched because the science never reads its own forecast.
