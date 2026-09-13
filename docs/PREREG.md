@@ -26,6 +26,36 @@ in `FOUNDLING.md`, and the run script that consumes it must refuse to start unle
 5. **Budget in measured units, or it is a wish.** Quote the machine and the commit whose run printed
    the unit.
 
+## Drills — measurements that test the apparatus, not a hypothesis
+
+A drill borrows this register's paperwork discipline (dated entry, budget in cited units, obituary)
+without making a prediction: its only permitted number is about the instrument. A drill may not
+test anything, and a registered hypothesis may not be scored on a band a drill printed after its
+first pair was seen (R2 in the drill script enforces exactly this direction).
+
+### D1-C1band — what is the same-machine noise floor of the borrowed early-decay metric?
+**Registered:** 2026-09-13, machine A, by the standing hand under the chair's nod of this day
+(「我点头」, authorizing *preparation and rehearsal*; the live run is withheld until the chair
+commands it explicitly — law: no experiment started by an agent that no human-named session authorised).
+**Scar clause:** S2 (`h6a_pilot_verdict.json`, `e08ca86d2ea4…`) — "early" must be a fixed step window,
+not "before the curves separate": this drill freezes WINDOW=50 steps *in the script, at HEAD, before
+any replicate exists*. S5 (`gate6_twin.json`, `52efb2a5baf5…`) — cross-machine floor is 0.028914 nats
+max |Δ|; if the *same-machine, same-seed* floor comes out comparable or larger, the rig carries
+nondeterminism Gate 6 said the machine does not, and that contradiction is the drill's result.
+**Question.** Replicating one arm (seed 13, machine A, `MEF@382e438a…`, byte-clean) n=3 times:
+how much does the first-50-step held-out decay wander?
+**Metric.** Δdecay of `Bval` over steps ≤ 50, nats; reported statistic: max−min across replicates.
+**Regime row.** training-under-constraint, schedule a-fixed-budget, lr flat 5e-4 (named, per E3's scar).
+**Budget.** 3 arms × 96.2 s + one base ladder 260.2 s ⇒ ceiling ≈ 8.1 min, units cited from chora
+records (letter-quoted A-machine prints), not believed; the drill's own wall-clock is its first output.
+**Obituary.** If replicates differ by more than ~0.03 nats, the same-seed band is not a machine band
+and C1 must switch to across-seed replicates — cost: ×3 budget, stated now. If a replicate fails to
+run at all, that is also the result: the borrowed apparatus is not reproducible as cited, and C1's
+apparatus clause reopens. Either way the number goes to `artifacts/results/` pinned in the manifest
+before anything may cite it.
+
+---
+
 ## 1 · Entry template
 
 ```markdown
