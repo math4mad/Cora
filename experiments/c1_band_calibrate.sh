@@ -25,10 +25,12 @@
 #         refusal must be rehearsed more often than the run.
 set -uo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"; cd "$ROOT"
-SESSION=""; REPS=3; DRY=0
+SESSION=""; REPS=3; DRY=0; REPARSE=0
 while [ $# -gt 0 ]; do case "$1" in
   --session) SESSION="${2:?}"; shift 2;; --reps) REPS="${2:?}"; shift 2;;
-  --dry-run) DRY=1; shift;; *) echo "usage: $0 --session <who> [--reps N] [--dry-run]"; exit 64;;
+  --dry-run) DRY=1; shift;;
+  --reparse) REPARSE=1; shift;;
+  *) echo "usage: $0 --session <who> [--reps N] [--dry-run|--reparse]"; exit 64;;
 esac; done
 
 # ---- R1/R2: registration ordering, read at HEAD not at the working tree -------------------------
@@ -93,6 +95,9 @@ if [ "$DRY" = "1" ]; then
   echo "[c1-band] DRY-RUN: ladder complete, nothing executed. Exit 0 means the refusals work, not that the rig does."; exit 0
 fi
 
+if [ "$REPARSE" = "1" ] && ls artifacts/staging/drills/D1-C1band/rep*/sweep_sched_a.json >/dev/null 2>&1; then
+  echo "[c1-band] --reparse: consuming ONLY the curves already in staging (their hashes are printed with the result); no rig command runs."
+else
 mkdir -p artifacts/staging/drills/D1-C1band
 # second pre-run lesson (first live failure of the live run, logged per law 4): the rig's sweep
 # mode reads base_run.json from its OWN OUT_DIR — a per-rep OUT_DIR must carry the ladder. The
@@ -113,30 +118,45 @@ for a in "${ARMS[@]}"; do
   [ -f "$LADDER/base_run.json" ] || { echo "[c1-band] base ladder missing — run base first"; exit 1; }
   echo "[c1-band] rep: $a"; eval "$a" || { echo "[c1-band] replicate FAILED"; exit 1; }
 done
+fi
 
 python3 - "$ROOT" <<'PY'
 import glob, hashlib, json, os, sys
 root = sys.argv[1]
 curves = sorted(glob.glob(os.path.join(root, "artifacts/staging/drills/D1-C1band/rep*/sweep_sched_a.json")))
-WINDOW = 50  # steps; fixed here, before any reading — scar S2: "early" is a window, never "before the curves separate"
-ds = []
+# CORRECTION #3 (pre-band, post-curves, logged in the register — law 4 says the row survives):
+# the frozen WINDOW=50 was INOPERATIVE as coded: evals land every 50 steps, so "points with
+# step<=50" is a single sample and its decay is undefined. No band had been printed when this was
+# found, so nothing was tuned on a reading — but the fix is logged, not smoothed. The metric now
+# reads exactly what the window meant: decay between the FIRST TWO evals (steps 50→100, a 50-step
+# span). Second flaw, same correction: different arms (k,r) are different conditions — pooling
+# them measured the arm spread, not the noise. Band = max, over arms, of the across-replicate
+# spread of that arm's decay; per-arm spreads are reported, never merged into a mean.
+SPREAD = {}
+rep_hashes = {cf: hashlib.sha256(open(cf, "rb").read()).hexdigest() for cf in curves}
 for cf in curves:
-    arms = json.load(open(cf)).get("arms", [])
-    for arm in arms:
-        cv = [p for p in arm.get("curve", []) if p["step"] <= WINDOW]
-        if len(cv) >= 2:
-            ds.append(round(cv[0]["Bval"] - cv[-1]["Bval"], 6))
-if len(ds) < 2:
-    print(f"[c1-band] NOT ENOUGH DATA: {len(ds)} usable curves from {len(curves)} files — cannot print a band. Logged, not dropped."); sys.exit(1)
-band = round(max(ds) - min(ds), 6)
-meta = dict(drill="D1-C1band", reps_replicated=len(curves), usable_curves=len(ds),
-            window_steps=WINDOW, metric="Bval decay over first window steps (nats)",
-            band_nats=band, note="max-min of early-decay across same-seed same-machine replicates")
+    for arm in json.load(open(cf)).get("arms", []):
+        cv = arm.get("curve", [])
+        if len(cv) >= 2 and cv[1]["step"] - cv[0]["step"] == 50:
+            SPREAD.setdefault((arm["k"], arm["r"]), []).append(round(cv[0]["Bval"] - cv[1]["Bval"], 6))
+usable = {a: v for a, v in SPREAD.items() if len(v) >= 2}
+if not usable:
+    print(f"[c1-band] NOT ENOUGH DATA: {len(SPREAD)} arms seen, none with ≥2 replicates — cannot print a band. Logged, not dropped."); sys.exit(1)
+per_arm = {f"k{a}r{b}": {"n": len(v), "spread": round(max(v) - min(v), 6), "decays": v} for (a, b), v in sorted(usable.items())}
+band = max(d["spread"] for d in per_arm.values())
+meta = dict(drill="D1-C1band", reps_replicated=len(curves), arms_usable=len(per_arm),
+            window="first two evals, 50-step span (correction #3; see register postscript)",
+            metric="decay of Bval, nats; band = max over arms of across-replicate spread",
+            band_nats=band, per_arm=per_arm,
+            curve_inputs={os.path.relpath(cf, root): h for cf, h in rep_hashes.items()},
+            note="same-seed same-machine replicates; a zero spread would mean the rig is fully deterministic at this scale — also reported, never rounded away")
 out = os.path.join(root, "artifacts/results/D1-C1band_band.json")
 os.makedirs(os.path.dirname(out), exist_ok=True)
 open(out, "w").write(json.dumps(meta, indent=1) + "\n")
 h = hashlib.sha256(open(out, "rb").read()).hexdigest()
-print(f"[c1-band] BAND = {band} nats over window={WINDOW} — written {out} sha256 {h}")
+print(f"[c1-band] BAND = {band} nats across {len(per_arm)} arms — written {out} sha256 {h}")
+for k, d in per_arm.items():
+    print(f"[c1-band]   {k}: n={d['n']} spread={d['spread']}")
 print("[c1-band] now append that (path, sha256) to artifacts/results/manifest.json BEFORE C1 cites it;")
 print("[c1-band] a band nobody can cite is a band anyone can retune. law 2, in both directions.")
 PY
