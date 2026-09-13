@@ -1,1 +1,44 @@
-{ "files": [] }
+{
+ "files": [
+  {
+   "path": "artifacts/results/D1-C1band/rep1.sweep_sched_a.json",
+   "sha256": "f5869551f7f001d665b2e134c256af815e77bdfeafaa062e10207e11e71e729f",
+   "bytes": 7541,
+   "source": "byte-copy of staging curve from replicate run of D1-C1band (rig MEF@382e438a, SEED=13, machine A)",
+   "obtained": "2026-09-13",
+   "by": "cora@c9afe68 (session cora-hand-D1-run, chair's \u300c\u505a\u5427\u300d)",
+   "script": "experiments/c1_band_calibrate.sh@correction#3-commit",
+   "notes": "replicate 1 of 3; original lived at artifacts/staging (git-ignored); this copy is the citable twin, same sha256"
+  },
+  {
+   "path": "artifacts/results/D1-C1band/rep2.sweep_sched_a.json",
+   "sha256": "d7b1ec5deffe4b8ad6433d8e2aba7869b0d2a27b287a5d7d1da807a2cb73b77b",
+   "bytes": 7545,
+   "source": "byte-copy of staging curve from replicate run of D1-C1band (rig MEF@382e438a, SEED=13, machine A)",
+   "obtained": "2026-09-13",
+   "by": "cora@c9afe68 (session cora-hand-D1-run, chair's \u300c\u505a\u5427\u300d)",
+   "script": "experiments/c1_band_calibrate.sh@correction#3-commit",
+   "notes": "replicate 2 of 3; original lived at artifacts/staging (git-ignored); this copy is the citable twin, same sha256"
+  },
+  {
+   "path": "artifacts/results/D1-C1band/rep3.sweep_sched_a.json",
+   "sha256": "68e154dd6bea726985f6a19575ad7e0253deefc0da94a5c442edb6f07529a396",
+   "bytes": 7544,
+   "source": "byte-copy of staging curve from replicate run of D1-C1band (rig MEF@382e438a, SEED=13, machine A)",
+   "obtained": "2026-09-13",
+   "by": "cora@c9afe68 (session cora-hand-D1-run, chair's \u300c\u505a\u5427\u300d)",
+   "script": "experiments/c1_band_calibrate.sh@correction#3-commit",
+   "notes": "replicate 3 of 3; original lived at artifacts/staging (git-ignored); this copy is the citable twin, same sha256"
+  },
+  {
+   "path": "artifacts/results/D1-C1band_band.json",
+   "sha256": "86cce6228634b62e390426784a8ef457054a6a967e1d233592134d6f475b42eb",
+   "bytes": 1407,
+   "source": "computed from the three pinned curves by the script named below; band = max over arms of across-replicate spread",
+   "obtained": "2026-09-13",
+   "by": "cora@c9afe68 (session cora-hand-D1-run, chair's \u300c\u505a\u5427\u300d)",
+   "script": "experiments/c1_band_calibrate.sh (--reparse path)",
+   "notes": "FIRST NUMBER IN CORA: band 0.003158 nats; obituary branch not fired (<0.03); k100 spread exactly 0 \u2014 nondeterminism rides the training path; C1's precondition \u2461 is now met, cite (path, sha256)"
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "drill": "D1-C1band",
+ "reps_replicated": 3,
+ "arms_usable": 5,
+ "window": "first two evals, 50-step span (correction #3; see register postscript)",
+ "metric": "decay of Bval, nats; band = max over arms of across-replicate spread",
+ "band_nats": 0.003158,
+ "per_arm": {
+  "k0r8": {
+   "n": 3,
+   "spread": 1e-06,
+   "decays": [
+    1.125571,
+    1.125572,
+    1.125571
+   ]
+  },
+  "k25r8": {
+   "n": 3,
+   "spread": 0.000122,
+   "decays": [
+    0.384777,
+    0.384655,
+    0.384744
+   ]
+  },
+  "k50r8": {
+   "n": 3,
+   "spread": 0.002971,
+   "decays": [
+    0.231063,
+    0.229013,
+    0.228092
+   ]
+  },
+  "k75r8": {
+   "n": 3,
+   "spread": 0.003158,
+   "decays": [
+    0.231269,
+    0.234427,
+    0.233814
+   ]
+  },
+  "k100r8": {
+   "n": 3,
+   "spread": 0.0,
+   "decays": [
+    0.74579,
+    0.74579,
+    0.74579
+   ]
+  }
+ },
+ "curve_inputs": {
+  "artifacts/staging/drills/D1-C1band/rep1/sweep_sched_a.json": "f5869551f7f001d665b2e134c256af815e77bdfeafaa062e10207e11e71e729f",
+  "artifacts/staging/drills/D1-C1band/rep2/sweep_sched_a.json": "d7b1ec5deffe4b8ad6433d8e2aba7869b0d2a27b287a5d7d1da807a2cb73b77b",
+  "artifacts/staging/drills/D1-C1band/rep3/sweep_sched_a.json": "68e154dd6bea726985f6a19575ad7e0253deefc0da94a5c442edb6f07529a396"
+ },
+ "note": "same-seed same-machine replicates; a zero spread would mean the rig is fully deterministic at this scale \u2014 also reported, never rounded away"
+}
