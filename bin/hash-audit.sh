@@ -74,7 +74,9 @@ if mode == "record":
             pass
     for repo, tag in [("cora", root), ("../chora", None), ("../Middle-Eigen-function", None),
                       ("../Kairos", None), ("../Sarcos-NN-Model", None), ("../Polynomial-Activated NN ", None),
-                      ("../JacobiGP", None)]:
+                      ("../ JacobiGP", None)]:   # was silently "../JacobiGP" — the --record loop never saw this bench's HEAD;
+#                                              # a swallowed git exit-code hid it until the alias made
+#                                              # BOTH spellings work. Silent skips are findings too.
         p = os.path.join(root, repo) if tag else repo
         r = sh("git", "-C", p, "rev-parse", "HEAD")
         if r.returncode == 0:
@@ -116,6 +118,10 @@ GIT_REPOS = {
                                                        # this one was found because a 7-hex commit refused
                                                        # to resolve and the fix is the kind law 2 warns
                                                        # about: paths are bytes too.
+                                                       # ALIAS 2026-09-13 (chair's request): ../JacobiGP -> " ../ JacobiGP",
+                                                       # a second door for fingers only — this table keeps the
+                                                       # canonical spaced address: aliases are for doors,
+                                                       # citations are for bytes.
 }
 
 def git_objects(tok):
