@@ -22,7 +22,7 @@ git show HEAD:docs/PREREG.md | grep -q '### D2-C1band' || REF R1 "D2 not registe
 [ -f artifacts/results/C1/pairs.json ] && REF R2 "pairs exist — D2 after pairs is post-hoc; the obituary covers the other branch, not this one"
 [ -n "$SESSION" ] || REF R3 "--session required"
 case "$SESSION" in Κ-hand-*) ;; *) REF R3 "house mark required (Κ-hand-<n>)";; esac
-bin/writelock.sh acquire "$SESSION" --ttl 7200 >/dev/null 2>&1 || { bin/writelock.sh status; REF R3 "lock held elsewhere"; }
+bin/writelock.sh acquire "$SESSION" --ttl 14400 >/dev/null 2>&1 || { bin/writelock.sh status; REF R3 "lock held elsewhere"; }
 trap 'bin/writelock.sh release >/dev/null 2>&1' EXIT
 RIG="$ROOT/../Middle-Eigen-function"; SHA="382e438a76669b6e49ce9663302d10025a6922f0"
 [ "$(git -C "$RIG" rev-parse HEAD)" = "$SHA" ] || REF R4 "rig HEAD moved under the plan"
@@ -36,16 +36,22 @@ echo "[d2] gates ok: registered · pre-pairs · lock $SESSION · rig clean · co
 STAGE="$ROOT/artifacts/staging/drills/D2-C1band"; mkdir -p "$STAGE"
 RIGCMD="cd $RIG && SEED=13 TS_PATH=$TS OUT_DIR"
 # ---- ceiling gate: 2 × D1 wall, D1 wall ARITHMETICED from its own pinned curves ----------------------
-python3 - "$ROOT" <<'PY' || REF R6 "cannot compute D1 ceiling from pinned curves"
-import json, sys, os
+python3 - "$ROOT" <<'PY' || REF R6 "cannot establish a ceiling"
+import json, os, re, subprocess, sys
 root = sys.argv[1]
 base = json.load(open(os.path.join(root, "artifacts/staging/drills/D1-C1band/base_run.json")))
 t0 = base["curve"][-1]["secs"]
 arms = sum(json.load(open(os.path.join(root, f"artifacts/results/D1-C1band/rep{i}.sweep_sched_a.json")))["arms"][a]["curve"][-1]["secs"]
            for i in (1,2,3) for a in range(5))
-d1_wall = t0 + arms + 3*25   # + per-rep eval passes, generously 25 s
-print(f"[d2] D1 wall, arithmetic from pinned bytes: {d1_wall:.0f} s (base {t0:.1f} + 15 arms {arms:.0f} + eval slack 75) — ceiling for D2 = {2*d1_wall:.0f} s")
-open(os.path.join(root, "artifacts/staging/drills/D2-C1band/ceiling.txt"), "w").write(f"{d1_wall:.0f} {2*d1_wall:.0f}")
+d1_wall = t0 + arms + 3*25
+reg = subprocess.run(["git", "-C", root, "show", "HEAD:docs/PREREG.md"], capture_output=True, text=True).stdout
+m = re.search(r"ceiling_s\s*=\s*(\d+)", reg)
+if m:
+    ceil = float(m.group(1)); src = "the register's chair-line (budget revision in force)"
+else:
+    ceil = 2 * d1_wall; src = "2x D1 wall (no revision found — original rule)"
+print(f"[d2] D1 wall, arithmetic from pinned bytes: {d1_wall:.0f} s · ceiling in force: {ceil:.0f} s · source: {src}")
+open(os.path.join(root, "artifacts/staging/drills/D2-C1band/ceiling.txt"), "w").write(f"{d1_wall:.0f} {ceil:.0f}")
 PY
 [ "$DRY" = "1" ] && { echo "[d2] DRY-RUN stops here — gates and arithmetic shown, rig untouched."; exit 0; }
 

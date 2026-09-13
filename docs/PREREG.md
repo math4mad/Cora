@@ -218,3 +218,13 @@ numbers reopens nothing — separate rows, forever (law 4).
 lands on fallback instantly and *deterministically*. The hack is disclosed here because an
 apparatus that reaches its corpus by network luck is the E3 wrinkle wearing a new coat: the route
 to fallback becomes part of the registered apparatus.
+
+**Budget revision D2 (2026-09-13, the chair's 「跑吧。时间之箭永远向前」 — the order to run):**
+ceiling for D2 = **10800 s (3 h)**, superseding the drill's original 2×D1-wall rule (1744 s; it
+refused twice, correctly, on the day). The runner now takes its ceiling **from this register line**
+(`ceiling_s = 10800`) and keeps its measurements to itself: **budget is the chair's text; cost is
+the script's arithmetic.** Arrow-of-time clause, as spoken: the ~2 h spent tonight are spent
+forward — whichever branch the obituary names (treasure-band materially exceeds 0.003158 ⇒ D2's
+numbers adopt; else fallback band stands), neither writes the other down, and the result — whatever
+it is — gets pinned into the register's D2 block before anything cites it. The refusals are not
+erased; they are why this line exists.
