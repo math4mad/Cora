@@ -85,3 +85,15 @@ outcome is a result, and both go in the letters, not the bin.**
 
 *Drafted 2026-09-13 by the chair's hand at the human's word; endorsed-in-form by the reply-opinion's
 §5.2 example `(sha256 6d1b7210b80b4a7e…)`. **Unregistered on purpose**: a frame is not a decision.*
+
+---
+
+**Erratum, 2026-09-13 (appended, not edited — law 4: no quiet correction).** The footer above cites
+the reply-opinion's endorsement at `(sha256 6d1b7210b80b4a7e…)`. That hash resolves to **no bytes in
+either workspace** (searched: files, manifests, git history — cf. letter 002 §2). The reply-opinion's
+current bytes are `9ebc7ed1d02ea0c2…` at `chora:artifacts/external/Chora_Your_Doughter_Is_Born/
+Qwen-sencond-round-review.md`, untracked and therefore *still uncitable* until the father pins it.
+**Registration precondition ① now reads:** replace this endorsement with a pin that resolves — either
+the pinned review, or the original source of `6d1b7210…` if it surfaces. C1 stays unregistered; the
+obituary stands; the failure mode caught here is S6's own class, caught by this workspace's own
+instrument on its own document. That is the immunisation working, and it is logged as a result.

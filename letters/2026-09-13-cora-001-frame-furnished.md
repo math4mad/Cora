@@ -45,3 +45,6 @@ by law it cannot be delegated to this hand.
 
 > *Anchored after the fact, since a letter cannot contain its own committing hash:* sent at
 > cora@`513f0b0` (recording commit; `git log` shows the chain `f52f0c6 → 513f0b0`).
+
+> **RATIFIED 2026-09-13** — the human endorsed this letter and its provisional signature with the word
+> **「准奏」**. Seat named thereby: *the human = chair*; instrument work remains with the standing hand.

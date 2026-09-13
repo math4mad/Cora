@@ -38,9 +38,9 @@ At the moment of inheriting, the father's tree was:
 | `data/` | 7 | `2efe7bfe668967144ee3f98352d35e15a4e5c8c0b63183038525eb5d88aa3e03` |
 | `artifacts/results/` | ~200 | `2b820a20ad6df07a7fe8bf5408df4002f1653ff77aefa11ad80f569e5c11a142` |
 
-Statuses: 60 store entries existence- and length-true at mount time (2026-09-13); full-sha audit
-`bin/sync.sh --check` is owed before any registration that consumes the store (the C1 draft's
-"re-check the scar clause" requirement covers exactly this debt).
+Statuses: ~~60 store entries existence- and length-true at mount time; full-sha audit owed~~ —
+**debt PAID 2026-09-13**: `bin/sync.sh --check` returned 60/60 full-sha-true over ~7 GB in 3.7 s
+(letter 002 §1; the deep audit is now routine, not ceremonial, hardware SHA being nearly free).
 
 The five bench tips, as seen through the father's symlinks, recorded so a change is *noticeable*:
 `JacobiGP 9d88e874… · Kairos ae6be016… · MEF 382e438a… · PolyNN 0eb29309… · Sarcos fb37e049…`.
@@ -84,6 +84,22 @@ hand-written hash for Cora's own `AGENTS.md` that had never been computed — a 
 posing as a verified one, caught by the author before the commit that would have pinned it. It is
 recorded here because law 4 says errors are never quietly dropped, and because FOUNDLING is exactly
 the file where "I typed it instead of hashing it" should leave a scar of its own. (2026-09-13.)
+
+## 4½ · Addendum, same day: one inheritance item failed to resolve (found by this workspace's own instrument)
+
+The C1 draft's self-endorsement cites the reply-opinion at `(sha256 6d1b7210b80b4a7e…)`; that hash
+matches **no bytes in either workspace**. The reply-opinion as it exists on the father's disk
+(`artifacts/external/Chora_Your_Doughter_Is_Born/Qwen-sencond-round-review.md`,
+`9ebc7ed1d02ea0c2…`) is **untracked and unmanifested — hence uncitable** (law 2, reverse direction).
+Full report and the five directory hashes: `letters/2026-09-13-cora-002-audit-paid-citation-bounced.md`.
+Until this resolves, **C1's registration precondition ① is open** — and the scar clause itself is what
+caught it: S6, repeating one day later, on the daughter's side.
+
+## 5 · Seats, as of this writing
+
+**chair = the human** (named 2026-09-13 by the word 「准奏」, which also ratified Letter 001's
+provisional signature). The standing hand (this agent) writes only where the chair points and signs
+nothing that binds the chair. The register remains empty; that is still the chair's choice, held open.
 
 ---
 *Laid in on 2026-09-13 (machine A) by the standing frame's hand, acting for the human's
