@@ -158,3 +158,26 @@ translation of it). The GHOSTWRITTEN/INACTIVE header above stands as the histori
 authorship and is not edited. Activation now waits on **exactly one** condition: ①, the father's
 pin (runner gate R3). Until then this entry is law for the frame and dead for the bench —
 which is, per article II, the whole point.
+
+**Erratum to the C1 caveat (same day, `Κ-hand-005`, append-only) — the cause was misassigned.**
+The 400 MB store treasure `data/tiny_stories.txt` has been present and pinned (7/7 full-sha-true,
+letter 002's own audit covered it) the entire time. D1 ran on the rig's fallback corpus **not because
+the network failed but because my TS_PATH redirection — added to stop writes into the father's store —
+manufactured the cache miss**; the fetch that then timed out was a symptom of my fix, not of the
+world's. The band stays valid as what it measured (per-arm replicate spread on a fixed corpus); but
+"corpus of the band" and "corpus of the run" are now known to differ — and that is not a footnote, it
+is a new prerequisite. Registered as **D2** below; the caveat's smoke-first clause remains, now with
+a name on its cause.
+
+### D2-C1band — the same band, measured on the store's treasure (corpus-consistency drill)
+**Registered:** 2026-09-13, machine A, by `Κ-hand-005` as paperwork only — **live run awaits the
+chair's explicit word**, exactly as D1 did. **Scar clause:** today's erratum itself (cause of fallback
+misassigned; store bytes present, mount bypassed) + S2 (window/eval granularity) + S5 (band scale).
+**Question.** On corpus = `data/tiny_stories.txt` (400 MB, pinned `sha256 1 of 7 in
+data/manifest.json`), same rig `MEF@382e438a…`, same seed 13, same metric as D1 (first-two-eval Bval
+decay, 50-step span): does the per-arm band of 0.003158 nats hold, and where does it differ?
+**Budget.** D1's own prints: ≈72 s/base·600 steps at fallback scale; TinyStories arms cost more per
+step — smoke-first clause applies before any replicate (refuse at 2× D1's wall). **Obituary.** If the
+treasure-corpus band exceeds the fallback band materially, C1 must adopt D2's numbers and the register's
+C1 band line is amended by appended postscript (never by edit); if they agree, the corpus question
+closes. Either row is a result; neither reopens the pairs, none of which exist yet.

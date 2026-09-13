@@ -96,7 +96,15 @@ if [ "$DRY" = "1" ]; then
   echo "      2 pairs × 18 arms + 4 bases, seeds {13,14,15}, rows separate, conjunction scored once."
   echo "[c1] DRY-RUN: nothing executed."; exit 0
 fi
-SMOKE="cd $RIG && SEED=13 TS_PATH=$STAGE/../D1-C1band/tiny_stories.txt OUT_DIR=$STAGE/smoke .venv/bin/python scripts/stage18_kairos_mini.py --mode pretrain --steps 20"
+# corpus: the store's pinned treasure, read through the mount (D2 lineage: the fallback corpus was
+# my cache-miss artifact, not the world's — erratum in PREREG). Fetch cannot occur (400 MB > 5 MB
+# floor) and writes were never possible (law 1); the pin is re-verified at consumption, law 9(a).
+TS="$ROOT/data/tiny_stories.txt"
+TSSHA="$(python3 -c "import json;print([e['sha256'] for e in json.load(open('$ROOT/data/manifest.json'))['files'] if e['path']=='data/tiny_stories.txt'][0])" 2>/dev/null)"
+[ -n "$TSSHA" ] || REF R9 "no pin for data/tiny_stories.txt in the store's register — no corpus, no smoke, no science"
+bin/pin.sh data/tiny_stories.txt "$TSSHA" >/dev/null 2>&1 || REF R9 "treasure fails four ways at consumption time — Law 9's toll: re-verified at consumption, not at inheritance"
+echo "[c1] R9 preflight ok: corpus = pinned store treasure (sha $TSSHA… verified at consumption)"
+SMOKE="cd $RIG && SEED=13 TS_PATH=$TS OUT_DIR=$STAGE/smoke .venv/bin/python scripts/stage18_kairos_mini.py --mode pretrain --steps 20"
 echo "[c1] smoke: $SMOKE"; eval "$SMOKE" || REF R9 "smoke arm failed — apparatus is clean of bytes but not of will; logged, not dropped"
 python3 - "$STAGE" "$CEILING_ENTRY_S" <<'PY'
 import json, glob, sys, os
