@@ -14,7 +14,7 @@ At the moment of inheriting, the father's tree was:
 
 | given | path (in chora) | sha256 | sha256 (in cora) |
 |---|---|---|---|
-| charter (AGENTS) | father's: `chora/AGENTS.md` | `2f7f02049266040d…` | daughter's own `AGENTS.md`: `46177d63cd3ad5b5…` (§6 hash-gate · §7 Law 9 no-treasure · §8 house marks + the Ζ addendum — all landed 2026-09-13; the fourth self-drift of the day, by amendment, not sloppiness) |
+| charter (AGENTS) | father's: `chora/AGENTS.md` | `2f7f02049266040d…` | daughter's own `AGENTS.md`: `477a57f8658e9300…` (§6 hash-gate · §7 Law 9 no-treasure · §8 house marks + the Ζ addendum — all landed 2026-09-13; the fourth self-drift of the day, by amendment, not sloppiness) |
 | register (PREREG — D1 drill + **C1 ghostwritten and RATIFIED by 「confirm」; activation awaits ① only**) | — | — | `2b9bc8038ff50db7…` |
 | C1 draft (superseded by its ratified register entry; errata + two status lines same day) | — | — | `ba213a073d9e62a4…` |
 
@@ -43,7 +43,15 @@ workspace goes stale by construction. Standing rule adopted for this file: re-ru
   remains in the father's house and is used, if ever, by citation.
 * No history. `git init` happened after the frame commit; nothing was re-based, imported or merged.
 
-## 2 · The shared store, as mounted (`bin/sync.sh`, read-only by law)
+## 2 · The shared store, as mounted (`bin/sync.sh`, read-only by law) — Θ MOVED OUT 2026-09-13
+
+*Address history: cargo now lives at `code-2026/GrandFather/` (Θ's own door, chair's 「搬家. 不是为
+你们, 是为我」); the father keeps the two registers below **byte-unchanged and tracked**, plus a
+git-ignored compatibility symlink per item — citations keep their original `(path, sha256)` form and
+resolve through his door to Θ's bytes. Relocated treasure re-verified five-for-five (400 MB + 10 MB
++ 4 MB + 3.1 GB + 440 MB, 4.1 s) before this paragraph stood. Father-side findings, reported, untouched:
+one empty shell `models/AI-ModelScope/bert-base-uncased` (0 B) and three pre-existing fsck danglees
+(blob/commit/tree) — his house's housekeeping, not ours.*
 
 | | entries | manifest sha256 |
 |---|---|---|

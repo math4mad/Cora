@@ -136,3 +136,16 @@ pointed at, the wind has landed, and the name is void the same day it is found.
 The wind's clause of voiding stands on its own text; it is now the only crest in this house that can
 be lost solely by being used. First deed under the mark, same hour: the ratification verb it names,
 κυροῦν, awaits exactly one more exercise below — the chair's, on C1, whenever the chair's hand writes it.*
+
+### §8 addendum 2 (2026-09-13) — Θ moved out. The chair's word: 「搬家. 不是为你们, 是为我. …
+我不要对齐我的思维定式」
+
+GrandFather's shelves now live at `code-2026/GrandFather/` (Θ's own address, git init'd same day,
+tracking only README — no second ledger, law 6 honoured). The father's house keeps the **deeds**
+(`models/manifest.json`, `data/manifest.json`, tracked, byte-unchanged) and a **compatibility door**
+per cargo item in its git-ignored zone — so every historical `(path, sha256)` citation still
+resolves, unchanged, through the father's address to Θ's bytes. §4's line "bin/sync.sh mounts the
+shared store from Chora" remains literally true: *the door is the father's; the treasure is the
+grandfather's; the fingerprints are the daughter's.* Proof of move: chora's git status identical to
+baseline, 5.2 GB of relocated treasure re-hash-verified in 4.1 s, scar battery, sync --check and
+validate --strict all green before this line was written.

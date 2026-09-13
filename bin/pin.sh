@@ -51,7 +51,7 @@ if not path or (mode == "verify" and not want):
 
 CODE = os.path.dirname(root)  # sibling-of-Cora directory
 repos = {"cora": root}
-for name in ("chora",):
+for name in ("chora", "GrandFather"):
     d = os.path.join(CODE, name)
     if os.path.isdir(d): repos[name] = d
 bd = os.path.join(repos.get("chora", ""), "benches")

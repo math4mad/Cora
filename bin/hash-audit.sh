@@ -113,6 +113,7 @@ GIT_REPOS = {
     "Kairos": os.path.join(root, "../Kairos"),
     "Sarcos": os.path.join(root, "../Sarcos-NN-Model"),
     "PolyNN": os.path.join(root, "../Polynomial-Activated NN "),
+    "GrandFather": os.path.join(root, "../GrandFather"),  # Θ est. 2026-09-13, chair's word; shelf with a deed
     "JacobiGP": os.path.join(root, "../ JacobiGP"),   # the leading space is real — chora's own sync
                                                        # comment said "trailing space is real" for PolyNN;
                                                        # this one was found because a 7-hex commit refused
