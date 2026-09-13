@@ -71,7 +71,10 @@ for mf in manifests:
 tracked = subprocess.run(["git", "ls-files", "artifacts/"], cwd=root, capture_output=True, text=True).stdout.split()
 pinned_paths = {e["path"] for mf in manifests for e in json.load(open(mf)).get("files", [])}
 for t in tracked:
-    if os.path.basename(t) == "manifest.json":
+    if os.path.basename(t) in ("manifest.json", "ABSENT.md"):
+        # ledgers pin nothing, including themselves: their sha changes exactly when the things
+        # they record change, so a self-pin self-refutes on the next edit. Their commit is their
+        # pin. (Found by this script's first C5 finding against its own ledger — keeper's rule.)
         continue
     if t not in pinned_paths:
         fails.append(f"{t}: C5 tracked bytes with no pin — uncitable (law 2, reverse)")

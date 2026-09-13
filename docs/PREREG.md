@@ -140,3 +140,13 @@ not informative, and "shape = knowledge" is re-worded to "shape = permission". E
 not bin. ** scar re-check (④) at drafting:** new boundaries from D1 are already inside this entry —
 per-arm bands (no global band across arms: spread rises with k), exact-zero band on eval-only arms,
 and the 50-step eval granularity as the floor of any "early" window.
+
+**C1 caveat, appended pre-ratification (same day):** the budget units (48.3 s/arm, 71.9 s/base) were
+printed on the rig's **local-fallback corpus** (0.1 MB A / 0.6 MB B) — the TinyStories fetch timed
+out during D1 and the fallback is what actually ran. The father's cited 96.2 s/arm was measured on a
+different corpus, so "retired" was too strong a word in the entry: the two numbers are not the same
+quantity. If C1's pair search or arms land on TinyStories, the budget re-prices at the father's
+scale, and the entry's ceiling doubles. Fix, pre-signed: **the C1 run script must print a smoke arm
+(20 steps) first, price the run in those measured units, and refuse to continue if the printed
+ceiling exceeds this entry's ceiling ×2.** Corpus of every run recorded via the rig's meta.json
+shaA/shaB/shaP, which D1 already proved it writes.
