@@ -149,3 +149,13 @@ shared store from Chora" remains literally true: *the door is the father's; the 
 grandfather's; the fingerprints are the daughter's.* Proof of move: chora's git status identical to
 baseline, 5.2 GB of relocated treasure re-hash-verified in 4.1 s, scar battery, sync --check and
 validate --strict all green before this line was written.
+
+### §8 addendum 3 (2026-09-13, chair's 「Cora also need herself homepage」) — the shadow page
+
+`docs/index.html` is Cora's homepage and a **derived artifact**: minted by `bin/homepage.sh` from
+git HEAD, the register, the manifests, the letter row, and *live* runs of `pin.sh` /
+`validate-manifests.sh` at build time. It holds no facts of its own — the page's own law, printed in
+its footer: *if you find a byte the generator cannot reproduce, that is a bug, not a decoration.*
+The minter refuses to ship a dead scar (exit ≠ 0), and its three first-hour defects (an f-string
+mine, five-of-six scars minted silently, a bare filename caught as a path) are annotated where they
+fell, per the house rule: refusals and regressions are the instrument's own scar tissue.
