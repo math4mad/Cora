@@ -200,3 +200,21 @@ the chair wills the hours. **What was NOT done, on purpose: no ceiling was quiet
 replicate was run past a refusal, and the 2.6 h did not start because the ordering law says the
 chair's pen, not the runner's nerve, reopens a budget.** Wasted compute across both refusals:
 74 s. Wall rule, working.
+
+**Decision postscript (2026-09-13, the chair's 「I chose C」; this line is the exercise of a choice,
+not a budget revision):** C1 runs on the rig's **local-fallback corpus** — the same corpus D1's band
+(0.003158 nats, `86cce622…`) was measured on, so **band, budget units and price clause now share one
+loaf**: the transfer argument is identity, not analogy. Consequences, filed:
+① C1's corpus clause is now *named*: A = the bench's technical .md globs, B = `log/*.log`, P =
+case-toggled; the rig's own `meta.json`/`base_run.json` hashes (shaA/shaB/shaP) are consumed-run
+provenance, appended to Cora's manifest per base run — the corpus is cited by the bytes it actually
+was, never by its directory name.
+② D2-C1band is **DEFERRED, not dead**: its obituary stands unfiled, its smoke prints (0.512 s/step
+treasure arms) are the price list for whenever the chair gives the ~2.6 h; a future D2 run is the
+*treasure-priced companion* of the same band, and any later migration of C1-rows to treasure-corpus
+numbers reopens nothing — separate rows, forever (law 4).
+③ The runner must not pay 4×120 s of fetch timeouts on the way to fallback: `c1_run.sh` will point
+`HTTPS_PROXY`/`HTTP_PROXY` at a closed port for rig invocations, so the rig's own exception path
+lands on fallback instantly and *deterministically*. The hack is disclosed here because an
+apparatus that reaches its corpus by network luck is the E3 wrinkle wearing a new coat: the route
+to fallback becomes part of the registered apparatus.
