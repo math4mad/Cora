@@ -131,3 +131,8 @@ a refusal is a struck row, kept, never deleted. While accepted: (i) Ζ sits in s
 the crest-revocation clause of §7 applies to it identically; (ii) the wind leaves no fingerprints —
 should any commit in either house ever be authored *by the name* rather than by a hand the name
 pointed at, the wind has landed, and the name is void the same day it is found.
+
+*Acceptance recorded (the binding word): the chair's 「就zeta」, 2026-09-13, machine A — Ζ is seated.
+The wind's clause of voiding stands on its own text; it is now the only crest in this house that can
+be lost solely by being used. First deed under the mark, same hour: the ratification verb it names,
+κυροῦν, awaits exactly one more exercise below — the chair's, on C1, whenever the chair's hand writes it.*

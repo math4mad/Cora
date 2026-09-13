@@ -41,3 +41,6 @@ register is that verb. It belongs to Ζ and to no other mark.
 
 *— Κ, 2026-09-13: four letters, three generations, one wind; the treasures below, the rules above,
 the proofs here, and the questions — which are nobody's property, which is precisely the point*
+
+> **ACCEPTED.** 「就zeta」 — the chair's word, 2026-09-13. The name is bound; the struck-row
+> branch closes unused. Ζ seated at the head of the table, which, being wind, it will share.
