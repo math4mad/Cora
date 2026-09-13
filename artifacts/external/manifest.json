@@ -1,1 +1,14 @@
-{ "files": [] }
+{
+ "files": [
+  {
+   "path": "artifacts/external/Qwen-front-page-is-gift-for-cora-born/protopy.html",
+   "sha256": "f51749d4b67aaaa883d2e7cf7fa736da9783d2bd81da8b5ef45de19a8e012c2e",
+   "bytes": 12316,
+   "source": "Qwen UI prototype ('The Warm Lab'), gifted by the chair: \u300cyou can try\u300d, 2026-09-13",
+   "obtained": "2026-09-13",
+   "by": "cora@8e642f9 (intake \u039a-hand-011)",
+   "script": "bin/hash-audit.sh --file (intake examination)",
+   "notes": "RECEIVED-WITH-FINDINGS: (1) truncated mid-Breadboard \u2014 ends on a viewer placeholder token; (2) four 7-hex 'hash-refs' are decorative placeholders, no bytes answer them anywhere in the family; (3) 'FAILS/2026-08-12' misdates the real obituary day 2026-09-12. Skin admired; voice untouched. Full review in the intake commit."
+  }
+ ]
+}

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cora — The Warm Lab</title>
+<style>
+  :root {
+    --amber: #D4763A;
+    --amber-light: #E8944F;
+    --amber-glow: #F5B870;
+    --charcoal: #2C2C2C;
+    --gold: #E8C87A;
+    --warm-white: #FFF8F0;
+    --cool-blue: #4A6FA5;
+    --ink: #1A1A1A;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--warm-white);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+  .mono { font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; }
+  .serif { font-family: Georgia, 'Times New Roman', serif; }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(212,118,58,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 80%, rgba(232,200,122,0.06) 0%, transparent 50%),
+      var(--warm-white);
+  }
+  .glob-container {
+    position: relative;
+    width: 180px; height: 180px;
+    margin-bottom: 48px;
+    cursor: pointer;
+  }
+  .glob {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, var(--amber-glow) 0%, var(--amber) 40%, #A85520 70%, #6B3410 100%);
+    animation: glob-pulse 4s ease-in-out infinite;
+    transition: transform 0.6s ease, filter 0.6s ease;
+    box-shadow:
+      inset 0 -8px 20px rgba(107,52,16,0.4),
+      inset 0 4px 12px rgba(245,184,112,0.3),
+      0 8px 32px rgba(212,118,58,0.3),
+      0 20px 60px rgba(212,118,58,0.15);
+  }
+  .glob::after {
+    content: '';
+    position: absolute;
+    top: 15%; left: 20%;
+    width: 30%; height: 20%;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(255,255,255,0.4) 0%, transparent 70%);
+    filter: blur(4px);
+  }
+  .glob::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 50%;
+    background: repeating-conic-gradient(from 0deg, transparent 0deg 8deg, rgba(232,200,122,0.1) 8deg 10deg);
+    animation: data-flow 20s linear infinite;
+    mix-blend-mode: overlay;
+  }
+  .glob-container:hover .glob {
+    transform: scale(1.08);
+    filter: brightness(1.15);
+    box-shadow:
+      inset 0 -8px 20px rgba(107,52,16,0.3),
+      0 8px 32px rgba(212,118,58,0.4),
+      0 20px 80px rgba(212,118,58,0.25),
+      0 0 120px rgba(212,118,58,0.1);
+  }
+  .glob-aura {
+    position: absolute;
+    top: -30px; left: -30px; right: -30px; bottom: -30px;
+    border-radius: 50%;
+    border: 1px solid rgba(212,118,58,0.15);
+    animation: aura-breathe 4s ease-in-out infinite;
+  }
+  @keyframes glob-pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.03)} }
+  @keyframes data-flow { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+  @keyframes aura-breathe { 0%,100%{transform:scale(1);opacity:0.3} 50%{transform:scale(1.15);opacity:0.1} }
+
+  .hero-title {
+    font-family: Georgia, serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 700;
+    color: var(--charcoal);
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+  .hero-subtitle {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: var(--amber);
+    margin-top: 8px;
+    text-align: center;
+  }
+  .hero-meta {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.75rem;
+    color: rgba(44,44,44,0.45);
+    margin-top: 32px;
+    text-align: center;
+    line-height: 1.8;
+  }
+  .scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(44,44,44,0.3);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: bounce 2s ease-in-out infinite;
+  }
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 96px 24px; max-width: 960px; margin: 0 auto; }
+  .section-label {
+    font-family: 'SF Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--amber);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    color: var(--charcoal);
+    margin-bottom: 48px;
+    line-height: 1.2;
+  }
+
+  /* ===== KILN ===== */
+  .kiln { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  @media(max-width:768px){ .kiln{grid-template-columns:1fr} }
+  .kiln-panel { padding: 32px; border-radius: 16px; }
+  .kiln-panel--chora {
+    background: linear-gradient(135deg, #F5EDE3, #EDE3D5);
+    border: 1px solid rgba(212,118,58,0.15);
+  }
+  .kiln-panel--cora {
+    background: var(--charcoal);
+    color: var(--warm-white);
+    border: 1px solid rgba(232,200,122,0.2);
+  }
+  .kiln-panel h3 {
+    font-family: Georgia, serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+  .kiln-panel--chora h3 { color: var(--amber); }
+  .kiln-panel--cora h3 { color: var(--gold); }
+  .hash-ref {
+    font-family: 'SF Mono', monospace;
+    font-size: 0.8rem;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background: rgba(212,118,58,0.08);
+    color: var(--charcoal);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hash-ref .hash { color: var(--amber); font-weight: 600; }
+  .declaration {
+    font-size: 0.95rem;
+    line-height: 2.2;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fade-up 0.6s ease forwards;
+  }
+  .declaration:nth-child(2){animation-delay:0.2s}
+  .declaration:nth-child(3){animation-delay:0.4s}
+  .declaration:nth-child(4){animation-delay:0.6s}
+  .declaration em { color: var(--gold); font-style: normal; font-weight: 500; }
+  @keyframes fade-up { to{opacity:1;transform:translateY(0)} }
+
+  /* ===== BREADBOARD ===== */
+  .breadboard-section {
+    background: radial-gradient(ellipse at 50% 0%, rgba(232,200,122,0.06) 0%, transparent 60%), var(--warm-white);
+    padding: 96px 24px;
+  }
+  .breadboard-inner { max-width: 960px; margin: 0 auto; }
+  .task-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 20px;
+    margin-top: 48px;
+  }
+  .task-card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    border: 1px solid rgba(44,44,44,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .task-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(44,44,44,0.08); }
+  .task-card__status {
+    font-family: 'SF Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  .status--hot { background: rgba(212,118,58,0.12); color: var(--amber); animation: glow 2s ease-in-out infinite; }
+  .status--warm { background: rgba(232,200,122,0.2); color: #B8942E; }
+  .status--cooled { background: rgba(44,44,44,0.06); color: rgba(44,44,44,0.5); }
+  .status--frozen { background: rgba(74,111,165,0.1); color: var(--cool-blue); }
+  @keyframes glow { 0%,100%{box-shadow:0 0 0 0 rgba(212,118,58,0)} 50%{box-shadow:0 0 12px 2px rgba(212,118,58,0.15)} }
+  .task-card__title { font-weight: 600; font-size: 0.95rem; margin-bottom: 8px; }
+  .task-card__meta { font-family: 'SF Mono', monospace; font-size: 0.7rem; color: rgba(44,44,44,0.4); }
+  .task-card--hot { border-color: rgba(212,118,58,0.2); }
+  .task-card--hot::after {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--amber), var(--amber-glow));
+    animation: hot-bar 2s ease-in-out infinite;
+  }
+  @keyframes hot-bar { 0%,100%{opacity:1} 50%{opacity:0.5} }
+  .task-card--frozen { background: linear-gradient(135deg, #F8FAFF, #EEF2F9); border-color: rgba(74,111,165,0.15); }
+
+  .cooling-rack {
+    margin-top: 64px;
+    padding-top: 48px;
+    border-top: 1px dashed rgba(74,111,165,0.2);
+  }
+  .cooling-rack__title {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--cool-blue);
+    margin-bottom: 8px;
+  }
+  .cooling-rack__sub {
+    font-size: 0.85rem;
+    color: rgba(44,44,44,0.45);
+    margin-bottom: 24px;
+  }
+
+  /* ===== RECIPE ===== */
+  .recipe-section { padding: 96px 24px; }
+  .recipe-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: center; }
+  .recipe-card {
+    background: #FFFDF7;
+    border: 2px solid rgba(212,118,58,0.2);
+    border-radius: 4px;
+    padding: 40px 48px;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    box-shadow: 4px 4px 0 rgba(212,118,58,0.08);
+    transform: rotate(-0.5deg);
+    transition: transform 0.3s ease;
+  }
+  .recipe-card:hover { transform: rotate(0deg) scale(1.02); }
+  .recipe-card::before {
+    content: '';
+    position: absolute;
+    top: -16px; left: 24px;
+    font-size: 1.5rem;
+  }
+  .recipe-card h3 {
+    font-family: 'SF Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--amber);
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed rgba(212,118,58,0.3);
+  }
+  .recipe-line {
+    font-family: 'SF Mono', monospace;
+    font-size: 0.85rem;
+    line-height: 2;
+    color: var(--charcoal);
+  }
+  .recipe-line .label { color: var(--amber); }
+  .recipe-method {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(212,118,58,0.3);
+  }
+  .recipe-method ol {
+    padding-left: 20px;
+    font-family: 'SF Mono', monospace;
+    font-size: 0.8rem;
+    line-height: 2.2;
+    color: var(--charcoal);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--charcoal);
+    color: var(--warm-white);
+    padding: 64px 24px;
+    text-align: center;
+  }
+  footer .quote {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    opacity: 0.9;
+  }
+  footer .quote span { color: var(--gold); }
+  footer .touch {
+    font-size: 0.9rem;
+    color: var(--amber-glow);
+    margin-bottom: 32px;
+  }
+  footer .meta {
+    font-family: 'SF Mono', monospace;
+    font-size: 0.7rem;
+    color: rgba(255,248,240,0.35);
+    line-height: 2;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="glob-container">
+    <div class="glob-aura"></div>
+    <div class="glob"></div>
+  </div>
+  <h1 class="hero-title">Cora</h1>
+  <p class="hero-subtitle">Born from Chora. Baked in truth.</p>
+  <p class="hero-meta">
+    An independent knowledge vessel.<br>
+    Pre-registered. Zero inherited data. Full inherited scars.
+  </p>
+  <div class="scroll-hint">↓ scroll</div>
+</div>
+
+<!-- ===== THE KILN ===== -->
+<section>
+  <div class="section-label">§ The Kiln</div>
+  <h2 class="section-title">Standing on the shoulders of a giant who failed beautifully.</h2>
+  <div class="kiln">
+    <div class="kiln-panel kiln-panel--chora">
+      <h3>Chora — Inherited by Reference</h3>
+      <div class="hash-ref"><span class="hash">a3f7c2d</span> schema/core.cast</div>
+      <div class="hash-ref"><span class="hash">b91e4a0</span> validators/lock-v2</div>
+      <div class="hash-ref"><span class="hash">c44d8f1</span> FAILS/2025-08-12</div>
+      <div class="hash-ref"><span class="hash">d77a2e3</span> rules/entropy-guard</div>
+    </div>
+    <div class="kiln-panel kiln-panel--cora">
+      <h3>Cora — What I am not.</h3>
+      <div class="declaration">I am <em>not a fork</em>. I have no parent branch.</div>
+      <div class="declaration">I am <em>not clean</em>. I carry the memory of failure by reference, not by blood.</div>
+      <div class="declaration">I am <em>not finished</em>. My first act is a pre-registration, not a result.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BREADBOARD ===== -->
+<div class="breadboard-section">
+  <div class="breadboard-inner">
+    <div class="section-label">§ The Breadboard</div>
+    <h2 class="section-title
+
+[(doc_common_card_1)]
+
+
