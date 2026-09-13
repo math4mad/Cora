@@ -3,5 +3,6 @@
 /models
 /data
 artifacts/**/staging/*
-!artifacts/staging/ABSENT.md   # the spoken-absence ledger is tracked: silence fails, speech is law
+# the spoken-absence ledger is tracked: silence fails, speech is law
+!artifacts/staging/ABSENT.md
 __pycache__/
