@@ -95,3 +95,48 @@ reading; the run's own first failure (rep sweeps without ladder files) is theirs
 5/6 founding docs, the review stays unmanifested, deliberately?) and ③ (named curve file, belongs to
 the C1 entry itself) remain open. Wall clock: ~7.5 min measured vs ~9.1 min budget — father's units
 held, now also printed by Cora herself.
+
+## C1 — Do ε-isospectral weight matrices carry the same early adaptation speed?
+
+**Status: GHOSTWRITTEN (chair's 「由您代笔」, 2026-09-13) — INACTIVE until the chair's 追认 lands
+and precondition ① resolves by the father's hand (chair's 「您的父亲落筆」); the C1 run script
+must enforce both, and enforces nothing the chair has not written here.**
+
+**Registered:** 2026-09-13 (drafted), machine A, by the standing hand as *scribe under protest-of-authorship*: signature owed by chair.
+**Endorsement (precondition ①, OPEN):** the reply-opinion `(sha256 9ebc7ed1d02ea0c26359d3cabf0fdd4c6fa0560264480ea5b4935523bf65aea9)` exists at `chora:artifacts/external/Chora_Your_Doughter_Is_Born/Qwen-sencond-round-review.md` but is untracked and unmanifested — *marked unresolved on this line by design*; the draft's `6d1b7210b80b4a7e` (likewise unresolved-by-design, cf. draft erratum) awaits the father's hand. Neither may be cited as endorsement until `bin/pin.sh` exits 0.
+**Question.** For two weight matrices whose scale-normalised singular-value spectra are within ε
+(W1 over 128-bin discretisation), does a rank-r increment applied at k% of a byte-LM run produce the
+same early held-out decay — and if not, what is the spectrum *not* carrying?
+**Prediction (falsifiable form).** For a pair (A,B) with W1(ŝ(A),ŝ(B)) ≤ ε: per cell (arm k,r; seed s),
+|d(A) − d(B)| ≤ band. **ε frozen NOW at 0.01**, before any pair search; if no pair in the corpus meets
+ε, that is the registered negative (Sarcos row: the arena may not exist) and ε is *not* retuned in
+this row — a new ε is a new C-number.
+**Metric.** d(M; r, k) = decay of Bval between the first two evals (steps 50→100; 50-step span),
+nats — identical to D1's corrected definition, so the band transfers. Row: *training-under-constraint*
+(k<100) and *frozen-base-increment* (k=100) in **separate rows forever**; every cell labelled at cell
+level; no cross-row averaging (S3/H9-M).
+**Band (citable, frozen pre-registration).** 0.003158 nats — max over arms of same-machine same-seed
+across-replicate spread, `artifacts/results/D1-C1band_band.json` `(sha256
+86cce6228634b62e390426784a8ef457054a6a967e1d233592134d6f475b42eb)`, verified four ways from Cora by
+`bin/pin.sh`. For k=100 cells the band is **exactly 0** (D1: frozen-base eval spread = 0.0): equality
+is required there, not tolerance. Cross-seed spread is *not* noise and is reported separately.
+**Seed policy.** {13, 14, 15} (family canonical ladder), all three scored, none cherry-picked; the
+hypothesis check is the **conjunction** over cells and seeds — one number (law 4.1); halves reported,
+scoring nothing.
+**Apparatus (borrowed, named, re-checked at run time).** rig `MEF@382e438a…`,
+`scripts/stage18_kairos_mini.py`, byte-clean gate as in D1 R4; spectra side `scripts/spectral_steepness.py`
+and `scripts/stage14_rank1_atoms.py` (tracked & clean at the same sha). Cora owns no apparatus.
+**Budget, in Cora's own measured units** (first entry priced from prints, not citations: 48.3 s/arm,
+71.9 s/base, machine A, from the pinned D1 curves `(sha256 f5869551…) (sha256 d7b1ec5d…) (sha256
+68e154dd…)`): 2 pairs (1 isospectral + 1 non-isospectral control) × (18 arms × 48.3 s) + 4 base
+ladders × 71.9 s ⇒ ceiling **≈ 40 min** + minutes of SVD. The father's cited 96.2 s/arm is retired —
+superseded by Cora's prints, both on record.
+**Curve files (precondition ③, named here).** every scored cell writes
+`artifacts/results/C1/<pairid>_<row>_k<k>_r<r>_s<seed>.curve.json`; the run script takes `--curve-dir`
+and **refuses where a target curve already exists** — reruns are new numbers, not amnesia.
+**Obituary (inherited from the draft, standing).** Isospectral pairs disagreeing beyond band ⇒
+the spectrum is not *the* carrier; non-isospectral pairs agreeing beyond band ⇒ it is permissive,
+not informative, and "shape = knowledge" is re-worded to "shape = permission". Either way: letters,
+not bin. ** scar re-check (④) at drafting:** new boundaries from D1 are already inside this entry —
+per-arm bands (no global band across arms: spread rises with k), exact-zero band on eval-only arms,
+and the 50-step eval granularity as the floor of any "early" window.
