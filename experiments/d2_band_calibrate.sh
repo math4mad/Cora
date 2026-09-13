@@ -49,17 +49,31 @@ open(os.path.join(root, "artifacts/staging/drills/D2-C1band/ceiling.txt"), "w").
 PY
 [ "$DRY" = "1" ] && { echo "[d2] DRY-RUN stops here — gates and arithmetic shown, rig untouched."; exit 0; }
 
-# ---- smoke-first: 20 steps, price tonight's corpus before any replicate ------------------------------
+# ---- smoke-first: price BOTH phases before any replicate.
+# R8-v2 (lives as an amendment; the gate's first live REFUSAL 2026-09-13 stands in the register):
+# v1 applied the pretrain step-rate to the adapter arms — a units bug: D1's base ran 0.120 s/step
+# while its arms ran ~0.054 s/step, and v1's formula could not have passed for D1 itself (would
+# project D1 at ~2700 s against the 1744 s ceiling it actually met). Fixed by MEASURING both rates
+# from 20-step smokes; the CEILING is untouched — an arithmetic repair, not a negotiation.
 eval "$RIGCMD=$STAGE/smoke .venv/bin/python scripts/stage18_kairos_mini.py --mode pretrain --steps 20" >/dev/null 2>&1 \
-  || REF R7 "smoke failed — logged, not dropped"
+  || REF R7 "base smoke failed — logged, not dropped"
+eval "$RIGCMD=$STAGE/smoke .venv/bin/python scripts/stage18_kairos_mini.py --mode sweep --adapter-steps 20" >/dev/null 2>&1 \
+  || REF R7 "arm smoke failed — logged, not dropped"
 python3 - "$STAGE" <<'PY' || REF R8 "projected beyond 2× D1 wall — refuse before the science"
-import json, sys, os
+import json, sys, os, glob
 stage = sys.argv[1]
-c = json.load(open(os.path.join(stage, "smoke", "base_run.json")))["curve"]
-rate = c[-1]["secs"] / 20.0
-proj = (600 + 45 * 300) * rate * 1.3 + 400
+rate_base = json.load(open(os.path.join(stage, "smoke", "base_run.json")))["curve"][-1]["secs"] / 20.0
+sm = glob.glob(os.path.join(stage, "smoke", "sweep_sched_a.json"))
+if sm:
+    arms = json.load(open(sm[0]))["arms"]
+    pts = [a["curve"][-1]["secs"] for a in arms if a.get("curve")]
+    rate_arm = (sum(pts) / len(pts)) / 20.0 if pts else rate_base * 0.5
+else:
+    rate_arm = rate_base * 0.5
+proj = (600 * rate_base + 45 * 300 * rate_arm + 3 * 30 + 60) * 1.3
 ceil = float(open(os.path.join(stage, "ceiling.txt")).read().split()[1])
-print(f"[d2] smoke print: {rate:.3f} s/step on the TREASURE corpus · projected D2 wall ≈ {proj:.0f} s vs ceiling {ceil:.0f} s")
+print(f"[d2] smoke prints (treasure corpus): base {rate_base:.3f} s/step · arm {rate_arm:.3f} s/step "
+      f"· projected D2 wall ≈ {proj:.0f} s vs ceiling {ceil:.0f} s")
 sys.exit(0 if proj <= ceil else 1)
 PY
 
