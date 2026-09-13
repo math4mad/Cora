@@ -2,5 +2,6 @@
 # shared store is mounted by bin/sync.sh (symlinks), never committed
 /models
 /data
-artifacts/**/staging/
+artifacts/**/staging/*
+!artifacts/staging/ABSENT.md   # the spoken-absence ledger is tracked: silence fails, speech is law
 __pycache__/
