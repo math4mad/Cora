@@ -9,6 +9,16 @@
    "by": "cora@8e642f9 (intake \u039a-hand-011)",
    "script": "bin/hash-audit.sh --file (intake examination)",
    "notes": "RECEIVED-WITH-FINDINGS: (1) truncated mid-Breadboard \u2014 ends on a viewer placeholder token; (2) four 7-hex 'hash-refs' are decorative placeholders, no bytes answer them anywhere in the family; (3) 'FAILS/2026-08-12' misdates the real obituary day 2026-09-12. Skin admired; voice untouched. Full review in the intake commit."
+  },
+  {
+   "path": "artifacts/external/README.md",
+   "sha256": "cf0bfb28e2e8a4b437195b111558c8d137f2a269075ab7c9012db915842cc34b",
+   "bytes": 730,
+   "source": "Cora's intake law for external bytes (written by \u039a-hand-010, chair's \u300ctry\u300d)",
+   "obtained": "2026-09-13",
+   "by": "cora@2658beb",
+   "script": "-",
+   "notes": "a rule, not a result: pinned so even the law against unproven bytes is itself provable"
   }
  ]
 }

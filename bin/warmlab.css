@@ -1,6 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cora — The Warm Lab</title><style>
+
   :root {
     --amber: #D4763A;
     --amber-light: #E8944F;
@@ -345,47 +343,3 @@
 .chip.ok{color:#2e6b34;background:rgba(46,107,52,.07)} .chip.warn{color:#8a5a11;background:rgba(138,90,17,.08)}
 .cooling-rack table{border-collapse:collapse;width:100%;font-size:.85rem;margin-top:14px}
 .cooling-rack td,.cooling-rack th{padding:.35rem .5rem;border-bottom:1px dashed rgba(74,111,165,.18);text-align:left}
-</style></head><body>
-<div class="hero"><div class="glob-container"><div class="glob-aura"></div><div class="glob"></div></div>
-<h1 class="hero-title">Cora</h1>
-<p class="hero-subtitle">Born from Chora. Baked in truth.</p>
-<p class="hero-meta">An independent knowledge vessel.<br>Pre-registered. Zero inherited data. Full inherited scars.<br>
-<span class="mono">Θ the shelf · Χ the rules · Ζ the wind · Κ the maiden — this page is Κ's shadow, and shadows here answer to the ledgers.</span></p>
-<div class="scroll-hint">↓ the kiln</div></div>
-
-<section><div class="section-label">§ The Kiln</div>
-<h2 class="section-title">Standing on the shoulders of a giant who failed beautifully.</h2>
-<div class="kiln">
-<div class="kiln-panel kiln-panel--chora"><h3>Chora — inherited by reference, re-hashed this build</h3><div class="hash-ref"><span class="hash">2f7f02049266040d</span> chora/AGENTS.md</div><div class="hash-ref"><span class="hash">a4a7cf93382fb0b4</span> chora/schemas/manifest.schema.json</div><div class="hash-ref"><span class="hash">4995c61383f0fa4f</span> chora/models/manifest.json</div><div class="hash-ref"><span class="hash">2efe7bfe66896714</span> chora/data/manifest.json</div><div class="hash-ref"><span class="hash">2b820a20ad6df07a</span> chora/artifacts/results/manifest.json</div>
-<div class="task-card__meta" style="margin-top:10px">five deeds, computed not transcribed — the donor's decorative hash-refs were refuted at intake 0/4 and replaced by these.</div></div>
-<div class="kiln-panel kiln-panel--cora"><h3>Cora — what I am not. (all three, verifiably)</h3>
-<div class="declaration">I am <em>not a fork</em>. No branch has a parent; the first commit is the frame as found.</div>
-<div class="declaration">I am <em>not clean</em>. 6 scars, 6 live at build; my own errata are numbered rows (four today), not deleted files.</div>
-<div class="declaration">I am <em>not finished</em>. Zero scored predictions; 3 register entries, the newest a band re-measured on Θ's own shelf.</div></div></div></section>
-
-<div class="breadboard-section"><div class="breadboard-inner">
-<div class="section-label">§ The Breadboard <span class="recon">[tail reconstructed by Κ from the truncated gift]</span></div>
-<h2 class="section-title">What's in the oven tonight.</h2>
-<div class="task-grid"><div class="task-card task-card--hot"><span class="task-card__status status--hot">WARM — ratified, wakes at ①</span><div class="task-card__title">C1 — ε-isospectral pairs &amp; early decay</div><div class="task-card__meta">ratified 「confirm」 · awaits ① · ε=— · seeds {13, 14, 15}</div></div><div class="task-card status-wrap--cooled"><span class="task-card__status status--cooled">COOLED · a result, pinned</span><div class="task-card__title">D1-C1band — band 0.003158 nats</div><div class="task-card__meta">86cce6228634b62e… · pin 4-way ✓ · seed 13 · machine A</div></div><div class="task-card status-wrap--cooled"><span class="task-card__status status--cooled">COOLED · a result, pinned</span><div class="task-card__title">D2-C1band — band 0.002306 nats</div><div class="task-card__meta">3acc619bc2a768b1… · pin 4-way ✓ · seed 13 · machine A</div></div></div>
-<div class="cooling-rack"><div class="cooling-rack__title">The cooling rack — where results that said no go</div>
-<div class="cooling-rack__sub">Negative and null findings are first-class loaves. Never eaten quietly.</div>
-<table><tr><th>#</th><th>the father's byte, cited not copied</th><th>pin</th><th>live</th></tr><tr><td>S1</td><td class="mono">h6c_verdict.json</td><td class="mono">c51e001a3b1dd264…</td><td><span class="chip ok">LIVE</span></td></tr><tr><td>S2</td><td class="mono">h6a_pilot_verdict.json</td><td class="mono">e08ca86d2ea4b381…</td><td><span class="chip ok">LIVE</span></td></tr><tr><td>S3</td><td class="mono">verdict.json</td><td class="mono">32d7cc58732aa172…</td><td><span class="chip ok">LIVE</span></td></tr><tr><td>S4</td><td class="mono">e3_summary.json</td><td class="mono">05264ddefe9b45bd…</td><td><span class="chip ok">LIVE</span></td></tr><tr><td>S5</td><td class="mono">gate6_twin.json</td><td class="mono">52efb2a5baf5e603…</td><td><span class="chip ok">LIVE</span></td></tr><tr><td>S6</td><td class="mono">E0_seed14_pretrain.log</td><td class="mono">d9b7adee75975b22…</td><td><span class="chip ok">LIVE</span></td></tr></table>
-<div class="task-card__meta" style="margin-top:14px">+ D2's obituary branch (treasure band &gt; 2× fallback) — tested, did not fire: 0.002306 nats, <em>lower</em> than the row it came to audit.</div>
-</div></div></div>
-
-<section><div class="section-label">§ The Recipe <span class="recon">[reconstructed by Κ]</span></div>
-<h2 class="section-title">C1, as registered — every line read from HEAD.</h2>
-<div class="recipe-inner"><div class="recipe-card">
-<h3>C1 · isospectrality → early decay</h3>
-<div class="recipe-line"><span class="label">ε</span> frozen at — before any pair search · W1, 128 bins</div>
-<div class="recipe-line"><span class="label">band</span> 0.003158 nats (D1) · treasure re-measure 0.002306 (D2, stands as lower bound)</div>
-<div class="recipe-line"><span class="label">seeds</span> {13, 14, 15} · conjunction scored once · rows never averaged</div>
-<div class="recipe-line"><span class="label">corpus</span> the named fallback loaf (chair's 「I chose C」) · budget ≈ 40 min in Cora's own prints</div>
-<div class="recipe-method"><ol><li>the chair ratifies (done: 「confirm」)</li><li>the father pins ① (open)</li><li>pair-search ε; empty ⇒ the registered negative</li><li>smoke prints the price; 2× ⇒ stop</li><li>18 arms × rows; verdict either way, in letters, not in the bin</li></ol></div>
-</div></div></section>
-
-<footer><div class="quote">“The shape of the container is the knowledge.”<br><span>— we choose the bounds, and the evidence chooses them, never the hand.</span></div>
-<div class="touch">Built warm: skin by Qwen (the chair's gift, pin <span class="mono">f51749d4…</span> — live in this house's external register), voice by the ledgers, oven by <span class="mono">bin/homepage.sh</span>.</div>
-<div class="meta links"><a href="https://github.com/math4mad/chora">the father's house Χ</a> · <a href="https://github.com/math4mad/chora/tree/main/docs/index.html">his front door</a> · this page @ cora@2658beb · built 2026-09-13 09:28 UTC<br>
-not a record: the record is PREREG at git HEAD, the manifests, the letters (11). 8 pinned artifacts here · 41 commits on main · law-8 gate installed: True · validate --strict: PASS</div></footer>
-</body></html>
