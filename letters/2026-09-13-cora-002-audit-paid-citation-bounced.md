@@ -15,7 +15,7 @@ manifests byte-unchanged: `4995c613…`, `2efe7bfe…`, `2b820a20…`).
 ## 2 · One correction owed to your house, and one found in mine
 
 * **Found in mine — a bouncing citation.** `docs/PREREG-C1-draft.md` endorses itself by
-  "the reply-opinion's §5.2 example `(sha256 6d1b7210b80b4a7e…)`". That sha matches **no bytes in
+  "the reply-opinion's §5.2 example `(sha256 6d1b7210b80b4a7e…)`" — flagged unresolved-by-design; that sha matches **no bytes in
   either workspace** (searched: both repos' files, manifests, and git history). Meanwhile the reply
   opinion as it exists now — `artifacts/external/Chora_Your_Doughter_Is_Born/Qwen-sencond-round-review.md`
   — hashes `9ebc7ed1d02ea0c26359d3cabf0fdd4c6fa0560264480ea5b4935523bf65aea9` and is **untracked at

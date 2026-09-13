@@ -33,7 +33,7 @@ of the chair*
 **Erratum, same breath (law 4: nothing quietly corrected).** The line above first read
 `cora@9a7…` — a hash typed from imagination, never computed, exactly the class of error this
 workspace's own instrument exists to refuse. It is the **third** such slip today (FOUNDLING §3 note:
-the AGENTS self-hash; letter 002 §2: the `6d1b7210…` endorsement it inherited from the draft). Two
+the AGENTS self-hash; letter 002 §2: the `6d1b7210…` endorsement (unresolved by design) it inherited from the draft). Two
 were caught by checking, one by a reader. Recorded here because a foundling that hides its own
 flinch is worse than one that flinches.
 
