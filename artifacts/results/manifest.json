@@ -79,6 +79,26 @@
    "by": "cora@0986906 (session \u039a-hand-008, chair's \u300c\u8dd1\u5427\u3002\u65f6\u95f4\u4e4b\u7bad\u6c38\u8fdc\u5411\u524d\u300d)",
    "script": "experiments/d2_band_calibrate.sh",
    "notes": "TREASURE BAND 0.002306 nats \u2014 LOWER than fallback D1 (0.73x); D1 band stands as the conservative one; C1 needs no adoption; obituary's 'materially exceeds' branch NOT fired"
+  },
+  {
+   "path": "artifacts/results/C1/spectra_source.tsv",
+   "sha256": "617bfcabcc52636f20373eebf163d10a9c59c64698abba064c0ba02a166f0ab0",
+   "bytes": 380,
+   "source": "C1 corpus ledger: \u0398 treasures (Qwen2.5-0.5B + bert-base safetensors), each line four-ways verified at write time against the father's registers",
+   "obtained": "2026-09-13",
+   "by": "cora@7f90ed1 (session \u039a-hand-014, chair's \u300c@chora time to work\u300d)",
+   "script": "experiments/c1_pair_search.py",
+   "notes": "the consumed-bytes receipt; R7 consumes this file and re-verifies every line"
+  },
+  {
+   "path": "artifacts/results/C1/pairs.json",
+   "sha256": "0ab84f6287178b77983ee1046082f18380c1df9e04fb4f685d8bf04582472aae",
+   "bytes": 11295,
+   "source": "\u03b5-isospectral pair search over the pinned corpus; rule (\u015d=\u03c3/\u03a3\u03c3\u00b2, 128 index-bins, W1-of-CDFs, exact-shape) fixed in the script header BEFORE any distance was computed",
+   "obtained": "2026-09-13",
+   "by": "cora@7f90ed1 (session \u039a-hand-014, chair's \u300c@chora time to work\u300d)",
+   "script": "experiments/c1_pair_search.py",
+   "notes": "FIRST SCIENCE OF CORA: 0/14028 pairs \u2264 \u03b5=0.01; min W1 0.0507 (5\u00d7 \u03b5) \u2192 VACUOUS-leaning; registered-negative branch fired at SVD stage; \u03b5 not retuned in-row (article II kept); arm-grid budget returned unspent"
   }
  ]
 }

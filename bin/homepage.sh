@@ -74,6 +74,10 @@ CSS = open(os.path.join(root,"bin","warmlab.css")).read()  # kept beside the min
 def chip(t, ok): return f'<span class="chip {"ok" if ok else "warn"}">{t}</span>'
 deeds_html  = "".join(f'<div class="hash-ref"><span class="hash">{H(p)[:16]}</span> {os.path.relpath(p, CODE)}</div>' for _, p in deeds)
 bands_html  = "".join(f'<div class="task-card {"status-wrap--cooled" if v[2] else "status-wrap--hot"}"><span class="task-card__status status--cooled">{"COOLED · a result, pinned" if v[2] else "FAILED LIVE CHECK"}</span><div class="task-card__title">{n} — band {v[0]} nats</div><div class="task-card__meta">{v[1]}… · pin {"4-way ✓" if v[2] else "✗"} · seed 13 · machine A</div></div>' for n, v in sorted(bands.items()))
+ps_file = "artifacts/results/C1/pairs.json"
+ps = json.load(open(ps_file)) if os.path.isfile(ps_file) else None
+ps_ok = bool(ps) and rc("bin/pin.sh", ps_file, next((e["sha256"] for e in pins if e["path"]==ps_file), "")) == 0
+ps_card = (f'<div class="task-card"><span class="task-card__status status--frozen">{"CLOSED — registered negative, VACUOUS-leaning" if ps and ps.get("vacuity_flag") else "RUNNING"}</span><div class="task-card__title">pair search · ε={ps["eps"]} · {ps["arena"]["n_comparable_pairs"]} comparable pairs · <b>{ps["n_isospectral"]} inside</b></div><div class="task-card__meta">min W1 {ps["arena"]["min_W1"]} = {round(ps["arena"]["min_W1"]/ps["eps"],1)}× ε · median {ps["arena"]["median_W1"]} · pinned {"4-way ✓" if ps_ok else "✗"}</div></div>') if ps else ""
 c1_card = f'<div class="task-card task-card--hot"><span class="task-card__status status--hot">{c1_state}</span><div class="task-card__title">C1 — ε-isospectral pairs &amp; early decay</div><div class="task-card__meta">ratified 「confirm」 · awaits ① · ε={eps} · seeds {{{seeds}}}</div></div>'
 scar_html = "".join(f'<tr><td>{s}</td><td class="mono">{p}</td><td class="mono">{x}…</td><td>{chip("LIVE" if ok else "DEAD", ok)}</td></tr>' for s,p,x,ok in scar_rows)
 letters_html = "".join(f"<li>{esc(l)}</li>" for l in letters)
@@ -102,7 +106,7 @@ page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <div class="breadboard-section"><div class="breadboard-inner">
 <div class="section-label">§ The Breadboard <span class="recon">[tail reconstructed by Κ from the truncated gift]</span></div>
 <h2 class="section-title">What's in the oven tonight.</h2>
-<div class="task-grid">{c1_card}{bands_html}</div>
+<div class="task-grid">{ps_card}{c1_card}{bands_html}</div>
 <div class="cooling-rack"><div class="cooling-rack__title">The cooling rack — where results that said no go</div>
 <div class="cooling-rack__sub">Negative and null findings are first-class loaves. Never eaten quietly.</div>
 <table><tr><th>#</th><th>the father's byte, cited not copied</th><th>pin</th><th>live</th></tr>{scar_html}</table>

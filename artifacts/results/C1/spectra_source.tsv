@@ -1,0 +1,3 @@
+# C1 spectra corpus: every line (path<TAB>sha256) four-ways VERIFIED at write time (Θ's registers)
+models/models/Qwen--Qwen2.5-0.5B/snapshots/master/model.safetensors	88c142557820ccad55bb59756bfcfcf891de9cc6202816bd346445188a0ed342
+models/models/AI-ModelScope--bert-base-uncased/snapshots/master/model.safetensors	68d45e234eb4a928074dfd868cead0219ab85354cc53d20e772753c6bb9169d3

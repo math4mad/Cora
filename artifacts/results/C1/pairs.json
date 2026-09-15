@@ -1,0 +1,324 @@
+{
+ "eps": 0.01,
+ "bins": 128,
+ "rule": "\u015d=\u03c3/\u03a3\u03c3\u00b2, 128 index-bins, linear interp, W1 of CDFs; exact shape match required",
+ "corpus": [
+  "Qwen--Qwen2.5-0.5B",
+  "AI-ModelScope--bert-base-uncased"
+ ],
+ "matrices": 168,
+ "n_isospectral": 0,
+ "arena": {
+  "n_comparable_pairs": 14028,
+  "min_W1": 0.0507,
+  "p01": 0.3422,
+  "median_W1": 8.3308,
+  "nearest_pairs": [
+   {
+    "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.12.mlp.up_proj.weight",
+    "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.13.mlp.up_proj.weight",
+    "W1": 0.05067
+   },
+   {
+    "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.8.mlp.gate_proj.weight",
+    "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.9.mlp.gate_proj.weight",
+    "W1": 0.05526
+   },
+   {
+    "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.4.self_attn.q_proj.weight",
+    "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.7.self_attn.q_proj.weight",
+    "W1": 0.06818
+   },
+   {
+    "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.mlp.up_proj.weight",
+    "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.4.mlp.up_proj.weight",
+    "W1": 0.07084
+   },
+   {
+    "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.13.self_attn.o_proj.weight",
+    "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.9.self_attn.o_proj.weight",
+    "W1": 0.07896
+   },
+   {
+    "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.15.mlp.up_proj.weight",
+    "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.19.mlp.up_proj.weight",
+    "W1": 0.10149
+   },
+   {
+    "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.14.mlp.gate_proj.weight",
+    "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.15.mlp.gate_proj.weight",
+    "W1": 0.10223
+   },
+   {
+    "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.11.mlp.up_proj.weight",
+    "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.13.mlp.up_proj.weight",
+    "W1": 0.10614
+   },
+   {
+    "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.17.mlp.gate_proj.weight",
+    "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.20.mlp.gate_proj.weight",
+    "W1": 0.10895
+   },
+   {
+    "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.11.mlp.gate_proj.weight",
+    "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.15.mlp.gate_proj.weight",
+    "W1": 0.1185
+   }
+  ]
+ },
+ "vacuity_flag": true,
+ "registered_negative_row": true,
+ "top_isospectral": [],
+ "farthest_controls": [
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.14.self_attn.v_proj.weight",
+   "W1": 44.649356
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.5.self_attn.v_proj.weight",
+   "W1": 44.338031
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.18.self_attn.v_proj.weight",
+   "W1": 43.945404
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.12.self_attn.v_proj.weight",
+   "W1": 43.286013
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.4.self_attn.v_proj.weight",
+   "W1": 43.126526
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.7.self_attn.v_proj.weight",
+   "W1": 43.103079
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.2.self_attn.v_proj.weight",
+   "W1": 42.588984
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.20.self_attn.v_proj.weight",
+   "W1": 42.500771
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.10.self_attn.v_proj.weight",
+   "W1": 42.354666
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.1.self_attn.v_proj.weight",
+   "W1": 42.308492
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.8.self_attn.v_proj.weight",
+   "W1": 42.211713
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.16.self_attn.v_proj.weight",
+   "W1": 41.271692
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.17.self_attn.v_proj.weight",
+   "W1": 41.127711
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.3.self_attn.v_proj.weight",
+   "W1": 41.01152
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.19.self_attn.v_proj.weight",
+   "W1": 40.886831
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.13.self_attn.v_proj.weight",
+   "W1": 40.6298
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.1.mlp.up_proj.weight",
+   "W1": 40.566935
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.3.mlp.up_proj.weight",
+   "W1": 40.28945
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.mlp.up_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "W1": 40.082039
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.4.mlp.up_proj.weight",
+   "W1": 40.045109
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.9.self_attn.v_proj.weight",
+   "W1": 39.893463
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.7.mlp.up_proj.weight",
+   "W1": 39.726012
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.5.mlp.up_proj.weight",
+   "W1": 39.540697
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.mlp.down_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "W1": 39.501549
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.6.mlp.up_proj.weight",
+   "W1": 39.422012
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.15.self_attn.v_proj.weight",
+   "W1": 39.287816
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.11.self_attn.v_proj.weight",
+   "W1": 39.263563
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.6.self_attn.v_proj.weight",
+   "W1": 39.179826
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.9.mlp.up_proj.weight",
+   "W1": 39.149847
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.1.mlp.down_proj.weight",
+   "W1": 38.991325
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.8.mlp.up_proj.weight",
+   "W1": 38.946244
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.2.mlp.up_proj.weight",
+   "W1": 38.926765
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.15.mlp.up_proj.weight",
+   "W1": 38.651324
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.19.mlp.up_proj.weight",
+   "W1": 38.650221
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.16.mlp.down_proj.weight",
+   "W1": 38.64688
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.3.mlp.gate_proj.weight",
+   "W1": 38.559892
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.11.mlp.up_proj.weight",
+   "W1": 38.507627
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.13.mlp.up_proj.weight",
+   "W1": 38.406755
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.12.mlp.up_proj.weight",
+   "W1": 38.394573
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.18.mlp.up_proj.weight",
+   "W1": 38.282551
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.10.mlp.up_proj.weight",
+   "W1": 38.240842
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.17.mlp.up_proj.weight",
+   "W1": 38.152806
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.14.mlp.up_proj.weight",
+   "W1": 38.060269
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.17.mlp.down_proj.weight",
+   "W1": 38.052332
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.22.mlp.down_proj.weight",
+   "W1": 37.991704
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.21.self_attn.v_proj.weight",
+   "W1": 37.975237
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.23.mlp.down_proj.weight",
+   "W1": 37.937174
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.1.mlp.gate_proj.weight",
+   "W1": 37.896977
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.2.mlp.gate_proj.weight",
+   "W1": 37.894801
+  },
+  {
+   "a": "chora::Qwen--Qwen2.5-0.5B::model.layers.0.self_attn.q_proj.weight",
+   "b": "chora::Qwen--Qwen2.5-0.5B::model.layers.4.mlp.down_proj.weight",
+   "W1": 37.69821
+  }
+ ]
+}

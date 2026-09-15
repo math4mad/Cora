@@ -245,3 +245,20 @@ register's *budget-revision* line read from the estimate, so the overestimate wa
 the chair's 3 h; tonight it proved a 3× margin of self-distrust is not waste but insurance: the
 arrow moved forward *inside* a budget whose arithmetic was honestly wrong, and the science is
 untouched because the science never reads its own forecast.
+
+**Postscript C1, pair-search RESULT (2026-09-13, chair's 「@chora time to work」; append-only):**
+168 natural matrices admitted (Θ's Qwen2.5-0.5B ∪ bert-base, four-ways verified at consumption via
+`artifacts/results/C1/spectra_source.tsv`), 14,028 exact-shape comparable pairs, 0.1 s scan:
+**zero within the frozen ε = 0.01.** The entry's registered-negative branch fires at the SVD stage —
+before any arm ran, and the ≈40-minute budget returns to the chair unspent. The arena census
+matters as much as the zero: **min W1 = 0.0507 (5× ε), p01 = 0.342, median = 8.33** — the nearest
+natural pair sits beyond the gate by a factor of five, so this row is not merely empty, it reads
+*arithmetically unable to fire* on natural trained weights at these sizes (law 7's precedent
+class, the father's “Time no boundary”). Per the entry's own sentence, ε is **not** retuned in-row.
+Pinned: `artifacts/results/C1/pairs.json` `(sha256 0ab84f6287178b77983ee1046082f18380c1df9e04fb4f685d8bf04582472aae)` · ledger `(sha256 617bfcabcc52636f20373eebf163d10a9c59c64698abba064c0ba02a166f0ab0)`.
+**Awaiting the chair's next word** — the row closes either way, and the choice is which sentence
+closes it: (i) C1 final as registered-negative + vacuous-arena (the honest reading of what was seen);
+(ii) a NEW number at a reachable ε (nearest-pair data says ε ≳ 0.051 opens the arena — one or two
+pairs live between 0.0507 and 0.06); (iii) a NEW number on constructed isospectral pairs
+(synthetic ŝ-matching ⇒ forces the *training-under-constraint* row, separate forever). No arms grid
+belongs to any branch that has no pairs.

@@ -6,3 +6,6 @@ artifacts/**/staging/*
 # the spoken-absence ledger is tracked: silence fails, speech is law
 !artifacts/staging/ABSENT.md
 __pycache__/
+
+# pi session exports land in the repo root by the harness — they are session records, not bytes of the house
+pi-session-*.html
