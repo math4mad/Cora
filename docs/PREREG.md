@@ -330,3 +330,15 @@ vs registered floor 1.0; gram-vs-svdvals concordance ~1e-14) says the constructi
 the reading of the matrix was. New scar for the family list: **a silent device-cast can poison a
 decomposition without ever throwing; concordance against an independent oracle (here, svdvals) is the
 falsifying test, and is now run before any arm is priced.**
+
+**C3 RESULT (2026-09-15, run-8, Κ-hand-016 — the number the register earned after seven instrument
+deaths).** Verdict `artifacts/results/C3_verdict.json` (sha256 cc1f4bf68abdfaf74a09c7bd04a0a804f4b7a352c2d7e0cba92b7ce7ec0034f6, pinned):
+**9/9 cells violate |d(iso) − d(A)| ≤ band ⇒ the registered conjunction is FALSE — shape is NOT the
+carrier of early held-out decay at this scale; C1's obituary sentence executes in the constructive
+regime.** Sensitivity control agrees on only 2/9 far cells, closing the "metric insensitive" branch
+honestly. Effect structure (reported, not re-scored): the q-slot dominates (Δiso 0.135–0.153 nats,
+≈50× band); gateB0/downB1 sit 1.5–8× outside the band 0.003158 — the rule is one-violution-kills and
+no cell was re-judged post-hoc. All 27 curves + verdict pinned in `artifacts/results/manifest.json`
+(40 entries, validate-manifests 0 failures); run-8 wall 1545.8 s, inside the registered ≈32-min budget.
+The executions of the three obituary branches belong to the letter; the science sentence is one word:
+**NOT**.
