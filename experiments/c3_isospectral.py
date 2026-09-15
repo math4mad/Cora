@@ -61,25 +61,49 @@ def spec128(s):
     return b / b.sum()
 def w1(a, b): return float(np.abs(np.cumsum(a) - np.cumsum(b)).sum())
 def surrogate(W, gs, stretch=None):
-    Wd = W.detach().to("cpu", torch.float64)          # float64 linalg on CPU — mps is for training, not decomposition
+    # MOVE FIRST, THEN CAST: the two-argument W.to("cpu", torch.float64) from an MPS tensor does NOT raise —
+    # it silently returns a ZEROED (unstable: 0.0 one call, 4e-6 the next) tensor, because mps has no float64.
+    # This one line is the common root of deaths 4-7: "the LAPACK knife-edge on near-zero repeated sigmas" was
+    # eigvalsh/gesdd being fed the Gram of a garbage matrix with hundreds of EXACT zeros (code 191 is not a
+    # numerical mystery there, it is the correct refusal). And every iso/far W1 printed by runs 1-3 was computed
+    # from such a zeroed source spectrum — those curves were rejected on grid-incompleteness anyway; they are
+    # now doubly dead and none shall ever be cited. Checkpoints load to mps because the rig trains there and
+    # the register says the rig's bytes are the science; the decomposition must therefore start by LEAVING mps.
+    Wcpu = W.detach().to("cpu")
+    Wd = Wcpu.to(torch.float64)
+    assert float(Wd.abs().max()) == float(Wcpu.abs().max()) and float(Wd.norm()) > 0.0, \
+        "surrogate: mps→float64 conversion corrupted the source bytes — the arm would train on a lie"
     # SPECTRUM ONLY — no singular vectors are ever used (frames come from QR): sigma = descending sqrt of
     # eigvalsh of the Gram matrix on the SMALLER side. eigvalsh survives repeated/ill-conditioned sigmas
     # where LAPACK gesdd refuses to converge (runs 4-5 died on the same q-matrix's knife edge: the base
     # itself trains non-deterministically at fp-noise level, so "the same matrix" is a lie between runs).
     def gram_spec(X):
-        # Gram on the small side + eigvalsh, with DETERMINISTIC RIDGE fallback: near-zero fp32 noise
-        # sigmas squared give condition numbers beyond float64, where even heevd refuses repeated
-        # eigenvalues (run-6, code 191). A ridge of eps*mean(G) shifts the whole spectrum by ~1e-16
-        # relative — immaterial to a normalized-spectrum W1 (the zero-cluster it "resolves" carries
-        # ~1e-14 of the mass), material to convergence. Honest, documented, deterministic.
+        # Gram on the small side + eigvalsh, with an ESCALATING SHIFT LADDER and exact subtraction.
+        # eigvalsh(G + rI) = eigvalsh(G) + r EXACTLY in theory (identity shifts move every eigenvalue by r),
+        # so subtracting r after returns the true spectrum to rounding — the report is not ridge-polluted.
+        # What the shift buys is convergence: LAPACK's QR iteration (the thing throwing code 191 on repeated
+        # eigenvalues, runs 6 and 7) scales its off-diagonal tolerance to |lambda_i|+|lambda_j|; a bottom
+        # cluster sitting at ~0 under r makes those gaps RESOLVABLE relative to the working scale.
+        # The run-6 fallback (r = 1e-13*mean, NEVER subtracted) failed twice over: the shift was below the
+        # eps*lambda_max resolution floor (so nothing changed) and its non-subtraction polluted the answer
+        # it didn't fix. Run-7 died on that rung at arm 2. Rungs 1e-9/1e-6/1e-3 of mean(diag): the first
+        # that converges also dominates its own subtraction error, and the zero-cluster it "resolves" is
+        # fp32 noise squared anyway (~1e-14 of the normalized mass). Deterministic, logged, honest.
         m2, n2 = X.shape
         G = (X.T @ X) if m2 >= n2 else (X @ X.T)
         try:
             ev = torch.linalg.eigvalsh(G)
         except Exception:
-            r = float(torch.diagonal(G).mean()) * 1e-13
-            ev = torch.linalg.eigvalsh(G + r * torch.eye(G.shape[0], dtype=G.dtype))
-            print(f"[c3] ridge-fallback engaged (shift {r:.3e}) — noise-floor degeneracy, documented in the register")
+            s = float(torch.diagonal(G).mean())
+            for e in (-9, -6, -3):
+                r = s * (10.0 ** e)
+                try:
+                    ev = torch.linalg.eigvalsh(G + r * torch.eye(G.shape[0], dtype=G.dtype)) - r
+                    print(f"[c3] shift-ladder rung 1e{e}*mean converged (r={r:.3e}, subtracted) — noise-floor degeneracy, logged")
+                    break
+                except Exception:
+                    if e == -3:
+                        raise
         return torch.flip(ev.clamp_min(0).sqrt(), [0])
     S = gram_spec(Wd)
     m_, n_, k_ = Wd.shape[0], Wd.shape[1], S.numel()
@@ -128,6 +152,7 @@ def run_arm(base_out, t, slot_key, variant):
         Bw, dist = surrogate(W, gs, stretch=(variant == "far"))
         tol = 1e-8 * float(W.detach().to("cpu").abs().max())      # RELATIVE tolerance: float32 weights on mps, float64 linalg — the assertion keeps its teeth (far must still clear 0.5) without tripping on fp noise
         if variant == "far" and dist < 1.0: sys.exit(f"[c3] CONSTRUCTION FAILURE: far arm W1={dist} < 0.5; abort")
+        if variant == "iso" and dist > 1e-6: sys.exit(f"[c3] CONSTRUCTION FAILURE: iso arm W1={dist} > 1e-6 (fp32-storage physical tolerance, register 194a5a8); abort")
         w1_note = dist
         with torch.no_grad(): obj.weight.copy_(Bw.to(obj.weight.dtype))
     tagged = rig.lora_targets(model, 8)
@@ -158,9 +183,30 @@ ceil = 2 * (3 * 600 * 0.12 + 27 * 48.3)                           # 2× the regi
 print(f"[c3] smoke: base {rate:.3f} s/step · projected ≈{proj:.0f} s vs ceiling {ceil:.0f} s")
 sys.exit(f"[c3] REFUSE R7: projected beyond 2×") if proj > ceil else None
 
+def prevalidate(base_out, t):
+    # "construction pre-validated on all six cells before launch" — the sentence commit 194a5a8 claimed and
+    # the instrument did not enact (run-7 died at arm 2 proving it: the check was a session ritual). Now it
+    # is procedure: every (slot x variant) construction is built and asserted against the SAME fp32 W bytes
+    # the arms will train on, BEFORE any arm starts. Constructions consume only the checkpoint's W and a
+    # private gseed (zero global-RNG draws), so this pass reproduces the arms' constructions byte-identically;
+    # a refusal here orphans nothing but the base itself.
+    report = {}
+    for sk, (path, giso, gfar) in SLOTS.items():
+        model = rig.build(cfg); model.load_state_dict(torch.load(os.path.join(base_out, "ckpt_k50.pt"), weights_only=True))
+        obj = model
+        for p in path.split("."): obj = getattr(obj, p)
+        W = obj.weight.detach()
+        _, di = surrogate(W, giso)
+        _, df = surrogate(W, gfar, stretch=True)
+        if di > 1e-6: sys.exit(f"[c3] CONSTRUCTION FAILURE (pre-validation): {sk}/iso/s{t} W1={di} > 1e-6; refusing before any arm runs")
+        if df < 1.0: sys.exit(f"[c3] CONSTRUCTION FAILURE (pre-validation): {sk}/far/s{t} W1={df} < 1.0 registered floor; refusing before any arm runs")
+        report[sk] = (di, df)
+    print(f"[c3] construction pre-validated on base s{t} (6/6): " + " | ".join(f"{k}: iso {v[0]:.2e}, far {v[1]:.2f}" for k, v in report.items()))
+
 results = {}
 for t in SEEDS:
     bo = run_base(t)
+    prevalidate(bo, t)
     for sk in SLOTS:
         for v in ("A", "iso", "far"):
             results[(sk, t, v)] = run_arm(bo, t, sk, v)["d_Bval_50_100"]

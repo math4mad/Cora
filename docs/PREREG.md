@@ -314,3 +314,19 @@ to exp(±2.5) after probe showed the m<n slot (down, 192x512) landing at W1=0.50
 registered floor, one rounding from a mid-grid construction abort. The ENTRY's claim ("far arms,
 W1 >= 0.5 by construction") is untouched: the lever is internal engineering, the guarantee is the
 registered word, and the runtime assertion now demands >= 1.0 (2x margin) before any arm is admitted.
+
+**C3 construction root-cause amendment (append-only, 2026-09-15, Κ-hand-016, post-abort session):** deaths
+4–7 of the grid (gesdd refusal, heevd code-191 twice, ridge-ladder failure) trace to ONE line: the two-argument
+`to("cpu", float64)` applied to an mps source weight. Torch does not raise on that call — it silently returns
+a zeroed, unstable tensor (norm 0.0 one call, 4e-6 the next), so every "LAPACK knife-edge" was eigvalsh/gesdd
+correctly refusing the Gram of garbage, and the "base trains non-deterministically at fp-noise level" premise
+(ee0a0ae) is retired as a symptom misread as a property. The instrument now moves off mps BEFORE casting,
+asserts the byte round-trip, and the six-cell construction pre-validation that the last commit CLAIMED is
+enacted in code, not ritual. Consequence for the ledger: runs 1–7 curves are now DOUBLY rejected — their
+construction-time W1 readings measured a corrupt conversion, so none is citable in any direction, and the
+sequestered batches stay sequestered. The registered claim, row, metric, band, budget and obituary branches
+are untouched: tonight's probe on real bytes (iso W1 floor 4–6e-9 vs registered assertion 1e-6; far 6.9–15.6
+vs registered floor 1.0; gram-vs-svdvals concordance ~1e-14) says the construction was never the hard part —
+the reading of the matrix was. New scar for the family list: **a silent device-cast can poison a
+decomposition without ever throwing; concordance against an independent oracle (here, svdvals) is the
+falsifying test, and is now run before any arm is priced.**
