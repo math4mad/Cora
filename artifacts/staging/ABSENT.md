@@ -28,3 +28,4 @@ rejected/C3-run2-shapecrash/  # orphan A-arm(s) from the rectangular-matmul cras
 rejected/C3-run3-shapecrash2/  # 7 orphans (seed-discipline worked: these are reproducible losses of the m<n frame crash); grid rejected whole after stretch-span widening
 rejected/C3-run3-shapecrash2/  # 7 orphans from the m<n frame crash (reproducible losses; grid rejected whole after stretch-span widening)
 rejected/C3-run4-lapackcrash/  # 2 orphans (A+iso qB0/s13) — run died in the VERIFICATION lapack call, not in science; whole grid restarted after swapping verification to torch-on-fp32
+rejected/C3-run5-lapackcrash2/  # 1 orphan (A arm qB0/s13 of run-5); LAPACK gesdd knife-edge — construction moved to Gram-eigvalsh spectrum (vectors never needed); whole grid restarted

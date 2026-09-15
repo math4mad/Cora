@@ -61,10 +61,16 @@ def spec128(s):
     return b / b.sum()
 def w1(a, b): return float(np.abs(np.cumsum(a) - np.cumsum(b)).sum())
 def surrogate(W, gs, stretch=None):
-    Wd = W.detach().to("cpu", torch.float64)          # float64 SVD/QR on CPU — mps is for training, not linear algebra
-    # rectangular-safe, probe-verified (iso carried-S error 4.5e-26; recompute W1 1.4e-14; far W1 ~11):
-    # reduced SVD, orthonormal frames from QR of private-generator Gaussians, spectrum CARRIED (iso) or stretched (far)
-    U, S, Vh = torch.linalg.svd(Wd, full_matrices=False)
+    Wd = W.detach().to("cpu", torch.float64)          # float64 linalg on CPU — mps is for training, not decomposition
+    # SPECTRUM ONLY — no singular vectors are ever used (frames come from QR): sigma = descending sqrt of
+    # eigvalsh of the Gram matrix on the SMALLER side. eigvalsh survives repeated/ill-conditioned sigmas
+    # where LAPACK gesdd refuses to converge (runs 4-5 died on the same q-matrix's knife edge: the base
+    # itself trains non-deterministically at fp-noise level, so "the same matrix" is a lie between runs).
+    def gram_spec(X):
+        m2, n2 = X.shape
+        G = (X.T @ X) if m2 >= n2 else (X @ X.T)
+        return torch.flip(torch.linalg.eigvalsh(G).clamp_min(0).sqrt(), [0])
+    S = gram_spec(Wd)
     m_, n_, k_ = Wd.shape[0], Wd.shape[1], S.numel()
     g = torch.Generator(device="cpu").manual_seed(gs)
     Q1, _ = torch.linalg.qr(torch.randn(m_, m_, generator=g, dtype=torch.float64))
@@ -75,7 +81,7 @@ def surrogate(W, gs, stretch=None):
     # svdvals (robust) — np's LAPACK refused the stretched spectrum outright (run-4's death). Orthogonal
     # frames leave the spectrum exact in theory; here we check the theory survives fp32. Honest by construction.
     Bw = B.to(torch.float32).to(torch.float64)
-    s1 = torch.linalg.svdvals(Bw).numpy()
+    s1 = gram_spec(Bw).numpy()                         # the same eigvalsh route for the check: measure the fp32 bytes the arm will train on
     return Bw, w1(spec128(S.numpy()), spec128(s1))
 
 # ---- arms -------------------------------------------------------------------------------------------
@@ -107,7 +113,6 @@ def run_arm(base_out, t, slot_key, variant):
         obj = model
         for p in path.split("."): obj = getattr(obj, p)           # ModuleList answers numeric child names — the rig's own lora_targets relies on it
         W = obj.weight.detach()
-        s0_cpu = torch.linalg.svdvals(W.detach().to("cpu", torch.float64)).numpy()
         gs = giso if variant == "iso" else gfar
         Bw, dist = surrogate(W, gs, stretch=(variant == "far"))
         tol = 1e-8 * float(W.detach().to("cpu").abs().max())      # RELATIVE tolerance: float32 weights on mps, float64 linalg — the assertion keeps its teeth (far must still clear 0.5) without tripping on fp noise
