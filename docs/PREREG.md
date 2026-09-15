@@ -300,3 +300,11 @@ returned ≈40 min; smoke clause inherited: refuse at 2× before the grid.
 **Curve files.** `artifacts/results/C3/<slot>_<variant>_s<seed>.curve.json`; verdict
 `artifacts/results/C3_verdict.json`; a target that exists is never overwritten (reruns are new
 run-ids); the obituary's three branches are written above, before the number, in their own words.
+
+**Construction-time amendment to C3 (append-only, 2026-09-13):** the entry names its slots
+`layers.0.attn.q / layers.0.mlp.gate / layers.1.mlp.down`; the rig's actual module paths are
+`blocks.0.q / blocks.0.gate / blocks.1.down` (Block holds projections flat). Same three slots, same
+geometries, same construction gseeds; the entry stands as the science, this line corrects the
+addresses the code navigates. The crash that found it orphaned one A-arm curve, sequestered whole
+(`artifacts/staging/rejected/C3-run1-pathcrash/`, receipted in ABSENT.md) - a partial grid is a
+partial grid, and reruns start from smoke.

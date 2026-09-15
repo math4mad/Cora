@@ -36,7 +36,7 @@ existing = [f for f in os.listdir(CDIR) if f.endswith(".curve.json")]
 not existing or ref("R6", f"{len(existing)} curve files already in C3/ — reruns get new run-ids; amnesia is not a mode")
 print(f"[c3] gates ok: registered · lock {A.session} · rig clean · band {BAND} live-verified · curve dir empty")
 
-SLOTS = {"qL0": ("layers.0.attn.q", 7001, 8001), "gateL0": ("layers.0.mlp.gate", 7002, 8002), "downL1": ("layers.1.mlp.down", 7003, 8003)}
+SLOTS = {"qB0": ("blocks.0.q", 7001, 8001), "gateB0": ("blocks.0.gate", 7002, 8002), "downB1": ("blocks.1.down", 7003, 8003)}  # rig Block keeps projections flat: blocks.N.q, not layers.N.attn.q
 SEEDS = [13, 14, 15]
 STAGE = os.path.join(ROOT, "artifacts/staging/runs/C3-r1")
 
