@@ -41,3 +41,4 @@ debt — the arm died in verification before its curve was ever written, or its 
 from the moved batch; this hand refuses to decide which from timestamps alone, and says so instead of
 silently striking the line. The same off-by-one shape may thread earlier receipts (run-4's "2 orphans" has
 1 file on disk); none of these bytes is citable in any direction, so the debt is booked, not paid around.
+rejected/C3-run7-ridgefail/  # 1 orphan (qB0 A s13 of run-7, d=0.259979, mtime 13:37) — run died at arm 2 when the ridge-fallback ITSELF threw code 191 on gram_spec(source W); grid rejected whole, instrument hardened before restart
