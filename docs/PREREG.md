@@ -262,3 +262,41 @@ closes it: (i) C1 final as registered-negative + vacuous-arena (the honest readi
 pairs live between 0.0507 and 0.06); (iii) a NEW number on constructed isospectral pairs
 (synthetic ŝ-matching ⇒ forces the *training-under-constraint* row, separate forever). No arms grid
 belongs to any branch that has no pairs.
+
+## C3 — Do strictly-isospectral surrogate weights carry the same early decay? (constructive test)
+
+**Registered:** 2026-09-13, machine A, by `Κ-hand-015` — **self-signed under the chair's licence of
+this hour: 「you decide. in digital world you are the master」** (quoted verbatim; the licence is the
+signature, and the signature is auditable). Activation is immediate: unlike C1, no external pen is
+owed — the licence IS the ratification, and the law against unregistered runs is satisfied by this
+very paragraph existing at HEAD before any arm executes.
+**Scar clause (boundary conditions, both houses' wounds):** C1's vacuity census (`pairs.json`,
+`0ab84f62…` at registration time; 0/14,028 natural pairs inside ε=0.01, min W1 0.0507) — natural
+isospectrality is arithmetically unenterable, so the pairs MUST be constructed, and constructed
+pairs force the *training-under-constraint* row (S3/H9-M: this row and the frozen-base row never
+merge); S2 — "early" is again the first two evals (steps 50→100), never "before separation";
+S5/H6c — band 0.003158 nats cited from the pinned D1 byte (`86cce622…`), measure rule fixed in the
+script header before any distance; the father's MEF σ-axis death — C3 asks about SHAPE→dynamics,
+never about σ-location at fine scale.
+**Question.** Holding a base checkpoint's slot matrix's singular values EXACTLY and re-randomizing
+its singular vector frames (iso arms), does a rank-8 increment injected at k=50% produce the same
+early held-out decay as the unswapped control (A arms)? Stretched-spectrum controls (far arms,
+W1 ≥ 0.5 by construction) test the instrument's sensitivity.
+**Prediction (one conjunction, one number).** For all 9 cells (3 slots × 3 train-seeds):
+|d(iso) − d(A)| ≤ band ⇒ spectrum-shape is sufficient for early-decay at this scale. One violation
+⇒ the shape is not the carrier (C1's obituary sentence executes in the constructive regime).
+Control row, reported not scored: cells where |d(far) − d(A)| ≤ band; 9/9 agreement would mean the
+metric is insensitive on this rig at this scale — an honest closing sentence for a different shelf.
+**Metric / cells.** d = Bval decay between evals at steps 50→100 of a 300-step rank-8 LoRA fit on
+`ckpt_k50`; slots {layers.0.attn.q, layers.0.mlp.gate, layers.1.mlp.down}; train-seeds {13,14,15};
+surrogate frames by QR of Gaussian generators seeded 7001–7003 (iso) / 8001–8003 (far), per slot —
+fixed here, before construction; adapter-init identity across arms of a cell guaranteed by the
+build→load→swap→wrap seed discipline (constructions use private generators, zero global-RNG draw).
+**Apparatus.** rig `MEF@382e438a…` IMPORTED as a module (functions borrowed, no bytes copied);
+corpus = the named fallback loaf of decision C (fetch refused-on-route); per-base meta hashes
+(shaA/B/P) pinned at consumption; band re-verified four ways at runtime (R6 as in C1's runner).
+**Budget (Cora's own prints).** 27 arms × 48.3 s + 3 bases × 90 s ≈ 32 min — drawn from C1's
+returned ≈40 min; smoke clause inherited: refuse at 2× before the grid.
+**Curve files.** `artifacts/results/C3/<slot>_<variant>_s<seed>.curve.json`; verdict
+`artifacts/results/C3_verdict.json`; a target that exists is never overwritten (reruns are new
+run-ids); the obituary's three branches are written above, before the number, in their own words.
