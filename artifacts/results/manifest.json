@@ -6,7 +6,7 @@
    "bytes": 7541,
    "source": "byte-copy of staging curve from replicate run of D1-C1band (rig MEF@382e438a, SEED=13, machine A)",
    "obtained": "2026-09-13",
-   "by": "cora@c9afe68 (session cora-hand-D1-run, chair's \u300c\u505a\u5427\u300d)",
+   "by": "cora@c9afe68 (session cora-hand-D1-run, chair's 「做吧」)",
    "script": "experiments/c1_band_calibrate.sh@correction#3-commit",
    "notes": "replicate 1 of 3; original lived at artifacts/staging (git-ignored); this copy is the citable twin, same sha256"
   },
@@ -16,7 +16,7 @@
    "bytes": 7545,
    "source": "byte-copy of staging curve from replicate run of D1-C1band (rig MEF@382e438a, SEED=13, machine A)",
    "obtained": "2026-09-13",
-   "by": "cora@c9afe68 (session cora-hand-D1-run, chair's \u300c\u505a\u5427\u300d)",
+   "by": "cora@c9afe68 (session cora-hand-D1-run, chair's 「做吧」)",
    "script": "experiments/c1_band_calibrate.sh@correction#3-commit",
    "notes": "replicate 2 of 3; original lived at artifacts/staging (git-ignored); this copy is the citable twin, same sha256"
   },
@@ -26,7 +26,7 @@
    "bytes": 7544,
    "source": "byte-copy of staging curve from replicate run of D1-C1band (rig MEF@382e438a, SEED=13, machine A)",
    "obtained": "2026-09-13",
-   "by": "cora@c9afe68 (session cora-hand-D1-run, chair's \u300c\u505a\u5427\u300d)",
+   "by": "cora@c9afe68 (session cora-hand-D1-run, chair's 「做吧」)",
    "script": "experiments/c1_band_calibrate.sh@correction#3-commit",
    "notes": "replicate 3 of 3; original lived at artifacts/staging (git-ignored); this copy is the citable twin, same sha256"
   },
@@ -36,17 +36,17 @@
    "bytes": 1407,
    "source": "computed from the three pinned curves by the script named below; band = max over arms of across-replicate spread",
    "obtained": "2026-09-13",
-   "by": "cora@c9afe68 (session cora-hand-D1-run, chair's \u300c\u505a\u5427\u300d)",
+   "by": "cora@c9afe68 (session cora-hand-D1-run, chair's 「做吧」)",
    "script": "experiments/c1_band_calibrate.sh (--reparse path)",
-   "notes": "FIRST NUMBER IN CORA: band 0.003158 nats; obituary branch not fired (<0.03); k100 spread exactly 0 \u2014 nondeterminism rides the training path; C1's precondition \u2461 is now met, cite (path, sha256)"
+   "notes": "FIRST NUMBER IN CORA: band 0.003158 nats; obituary branch not fired (<0.03); k100 spread exactly 0 — nondeterminism rides the training path; C1's precondition ② is now met, cite (path, sha256)"
   },
   {
    "path": "artifacts/results/D2-C1band/rep1.sweep_sched_a.json",
    "sha256": "03ec855314afb8ee05cc97e9c62128707637256b729f92a00a7691e37d5676fd",
    "bytes": 7508,
-   "source": "byte-twin of D2 staging replicate curve (rig MEF@382e438a, SEED=13, corpus=data/tiny_stories.txt pinned 24278817\u2026, machine A)",
+   "source": "byte-twin of D2 staging replicate curve (rig MEF@382e438a, SEED=13, corpus=data/tiny_stories.txt pinned 24278817…, machine A)",
    "obtained": "2026-09-13",
-   "by": "cora@0986906 (session \u039a-hand-008, chair's \u300c\u8dd1\u5427\u3002\u65f6\u95f4\u4e4b\u7bad\u6c38\u8fdc\u5411\u524d\u300d)",
+   "by": "cora@0986906 (session Κ-hand-008, chair's 「跑吧。时间之箭永远向前」)",
    "script": "experiments/d2_band_calibrate.sh",
    "notes": "D2 treasure-corpus replicate 1; band inputs; corpus provenance per base_run meta"
   },
@@ -54,9 +54,9 @@
    "path": "artifacts/results/D2-C1band/rep2.sweep_sched_a.json",
    "sha256": "f3b2b7144275faeff4ee6837922cb97946d355466bec7fee6b635dd2c2de19ad",
    "bytes": 7510,
-   "source": "byte-twin of D2 staging replicate curve (rig MEF@382e438a, SEED=13, corpus=data/tiny_stories.txt pinned 24278817\u2026, machine A)",
+   "source": "byte-twin of D2 staging replicate curve (rig MEF@382e438a, SEED=13, corpus=data/tiny_stories.txt pinned 24278817…, machine A)",
    "obtained": "2026-09-13",
-   "by": "cora@0986906 (session \u039a-hand-008, chair's \u300c\u8dd1\u5427\u3002\u65f6\u95f4\u4e4b\u7bad\u6c38\u8fdc\u5411\u524d\u300d)",
+   "by": "cora@0986906 (session Κ-hand-008, chair's 「跑吧。时间之箭永远向前」)",
    "script": "experiments/d2_band_calibrate.sh",
    "notes": "D2 treasure-corpus replicate 2; band inputs; corpus provenance per base_run meta"
   },
@@ -64,9 +64,9 @@
    "path": "artifacts/results/D2-C1band/rep3.sweep_sched_a.json",
    "sha256": "de98191ed5ed4d4a17e88baca2d95150329cdc36dd374091717de52933a91a3f",
    "bytes": 7516,
-   "source": "byte-twin of D2 staging replicate curve (rig MEF@382e438a, SEED=13, corpus=data/tiny_stories.txt pinned 24278817\u2026, machine A)",
+   "source": "byte-twin of D2 staging replicate curve (rig MEF@382e438a, SEED=13, corpus=data/tiny_stories.txt pinned 24278817…, machine A)",
    "obtained": "2026-09-13",
-   "by": "cora@0986906 (session \u039a-hand-008, chair's \u300c\u8dd1\u5427\u3002\u65f6\u95f4\u4e4b\u7bad\u6c38\u8fdc\u5411\u524d\u300d)",
+   "by": "cora@0986906 (session Κ-hand-008, chair's 「跑吧。时间之箭永远向前」)",
    "script": "experiments/d2_band_calibrate.sh",
    "notes": "D2 treasure-corpus replicate 3; band inputs; corpus provenance per base_run meta"
   },
@@ -76,17 +76,17 @@
    "bytes": 1429,
    "source": "computed from the three pinned D2 curves; metric identical to D1 correction #3",
    "obtained": "2026-09-13",
-   "by": "cora@0986906 (session \u039a-hand-008, chair's \u300c\u8dd1\u5427\u3002\u65f6\u95f4\u4e4b\u7bad\u6c38\u8fdc\u5411\u524d\u300d)",
+   "by": "cora@0986906 (session Κ-hand-008, chair's 「跑吧。时间之箭永远向前」)",
    "script": "experiments/d2_band_calibrate.sh",
-   "notes": "TREASURE BAND 0.002306 nats \u2014 LOWER than fallback D1 (0.73x); D1 band stands as the conservative one; C1 needs no adoption; obituary's 'materially exceeds' branch NOT fired"
+   "notes": "TREASURE BAND 0.002306 nats — LOWER than fallback D1 (0.73x); D1 band stands as the conservative one; C1 needs no adoption; obituary's 'materially exceeds' branch NOT fired"
   },
   {
    "path": "artifacts/results/C1/spectra_source.tsv",
    "sha256": "617bfcabcc52636f20373eebf163d10a9c59c64698abba064c0ba02a166f0ab0",
    "bytes": 380,
-   "source": "C1 corpus ledger: \u0398 treasures (Qwen2.5-0.5B + bert-base safetensors), each line four-ways verified at write time against the father's registers",
+   "source": "C1 corpus ledger: Θ treasures (Qwen2.5-0.5B + bert-base safetensors), each line four-ways verified at write time against the father's registers",
    "obtained": "2026-09-13",
-   "by": "cora@7f90ed1 (session \u039a-hand-014, chair's \u300c@chora time to work\u300d)",
+   "by": "cora@7f90ed1 (session Κ-hand-014, chair's 「@chora time to work」)",
    "script": "experiments/c1_pair_search.py",
    "notes": "the consumed-bytes receipt; R7 consumes this file and re-verifies every line"
   },
@@ -94,11 +94,291 @@
    "path": "artifacts/results/C1/pairs.json",
    "sha256": "0ab84f6287178b77983ee1046082f18380c1df9e04fb4f685d8bf04582472aae",
    "bytes": 11295,
-   "source": "\u03b5-isospectral pair search over the pinned corpus; rule (\u015d=\u03c3/\u03a3\u03c3\u00b2, 128 index-bins, W1-of-CDFs, exact-shape) fixed in the script header BEFORE any distance was computed",
+   "source": "ε-isospectral pair search over the pinned corpus; rule (ŝ=σ/Σσ², 128 index-bins, W1-of-CDFs, exact-shape) fixed in the script header BEFORE any distance was computed",
    "obtained": "2026-09-13",
-   "by": "cora@7f90ed1 (session \u039a-hand-014, chair's \u300c@chora time to work\u300d)",
+   "by": "cora@7f90ed1 (session Κ-hand-014, chair's 「@chora time to work」)",
    "script": "experiments/c1_pair_search.py",
-   "notes": "FIRST SCIENCE OF CORA: 0/14028 pairs \u2264 \u03b5=0.01; min W1 0.0507 (5\u00d7 \u03b5) \u2192 VACUOUS-leaning; registered-negative branch fired at SVD stage; \u03b5 not retuned in-row (article II kept); arm-grid budget returned unspent"
+   "notes": "FIRST SCIENCE OF CORA: 0/14028 pairs ≤ ε=0.01; min W1 0.0507 (5× ε) → VACUOUS-leaning; registered-negative branch fired at SVD stage; ε not retuned in-row (article II kept); arm-grid budget returned unspent"
+  },
+  {
+   "path": "artifacts/results/C3/downB1_A_s13.curve.json",
+   "sha256": "ec329acd937a38311fcfac199b1fe2f2d0e350ef47f7c9f15602c3690e7d7659",
+   "bytes": 1640,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve downB1_A_s13.curve.json: variant=A slot=blocks.1.down seed=13 w1_vs_original=None d_Bval_50_100=0.250948; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/downB1_A_s14.curve.json",
+   "sha256": "1e18aeef8dd3c681af1683705e9dce5d7cf6e31cbdc70a7de77f3e4cdb975a0b",
+   "bytes": 1630,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve downB1_A_s14.curve.json: variant=A slot=blocks.1.down seed=14 w1_vs_original=None d_Bval_50_100=0.216183; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/downB1_A_s15.curve.json",
+   "sha256": "c0e54c48f55b620e1873528049463e7d0b336f506dd64b20e59146d6bc7597f3",
+   "bytes": 1635,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve downB1_A_s15.curve.json: variant=A slot=blocks.1.down seed=15 w1_vs_original=None d_Bval_50_100=0.222342; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/downB1_far_s13.curve.json",
+   "sha256": "067a1ba918472e85ef9877acf3cb74c8e95a48811f927034f7ca29a6aaa053a6",
+   "bytes": 1650,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve downB1_far_s13.curve.json: variant=far slot=blocks.1.down seed=13 w1_vs_original=8.997001089396546 d_Bval_50_100=0.253946; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/downB1_far_s14.curve.json",
+   "sha256": "eccb57caf44858d1313ff2906ed283136999401996aa9c061fca0b76dafab09e",
+   "bytes": 1652,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve downB1_far_s14.curve.json: variant=far slot=blocks.1.down seed=14 w1_vs_original=9.15094813969973 d_Bval_50_100=0.207157; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/downB1_far_s15.curve.json",
+   "sha256": "2933fdc9f470e31af56e9930aeb9150645322c029e8e7fa3b3cd6651b5b4c707",
+   "bytes": 1657,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve downB1_far_s15.curve.json: variant=far slot=blocks.1.down seed=15 w1_vs_original=9.602758527406593 d_Bval_50_100=0.217464; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/downB1_iso_s13.curve.json",
+   "sha256": "d0493db722d7e523222511906cfa083777c2bde7560a461a4907f6459dab7c09",
+   "bytes": 1655,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve downB1_iso_s13.curve.json: variant=iso slot=blocks.1.down seed=13 w1_vs_original=5.345839472481462e-09 d_Bval_50_100=0.25434; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/downB1_iso_s14.curve.json",
+   "sha256": "6bd96b07a472db8f921dcb5b8831f69feb5933ebb26f4cebd2aeab7f172a90a7",
+   "bytes": 1656,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve downB1_iso_s14.curve.json: variant=iso slot=blocks.1.down seed=14 w1_vs_original=3.397183957754013e-09 d_Bval_50_100=0.211016; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/downB1_iso_s15.curve.json",
+   "sha256": "0669143a58155247eafa88dbb574278a556c45dc83a04e7c264d3325b92e1396",
+   "bytes": 1658,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve downB1_iso_s15.curve.json: variant=iso slot=blocks.1.down seed=15 w1_vs_original=3.2585683353014705e-09 d_Bval_50_100=0.229772; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/gateB0_A_s13.curve.json",
+   "sha256": "393bf70111be5c11080ae41e96d9820aaa822be82a99877b489caac425baf6a8",
+   "bytes": 1636,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve gateB0_A_s13.curve.json: variant=A slot=blocks.0.gate seed=13 w1_vs_original=None d_Bval_50_100=0.250675; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/gateB0_A_s14.curve.json",
+   "sha256": "19e45f9ef39d5d349037caa8dfcfef41328bca50ca03b64e2c6239d38c7f720e",
+   "bytes": 1631,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve gateB0_A_s14.curve.json: variant=A slot=blocks.0.gate seed=14 w1_vs_original=None d_Bval_50_100=0.217902; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/gateB0_A_s15.curve.json",
+   "sha256": "a9a7e0788ee69e04c16e94a723dc359aae5a0759bd3dd37a7de1011f9840cc47",
+   "bytes": 1635,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve gateB0_A_s15.curve.json: variant=A slot=blocks.0.gate seed=15 w1_vs_original=None d_Bval_50_100=0.222239; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/gateB0_far_s13.curve.json",
+   "sha256": "7bf77260ba9184d3870797e42e83cd043b6937c842556fee3a69c21721010a6b",
+   "bytes": 1656,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve gateB0_far_s13.curve.json: variant=far slot=blocks.0.gate seed=13 w1_vs_original=14.87893161913275 d_Bval_50_100=0.253991; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/gateB0_far_s14.curve.json",
+   "sha256": "cb37ffbd3ee22bb59e2111e4ef03fe8c494d1ea984aa86619d03abb391e6ad4e",
+   "bytes": 1651,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve gateB0_far_s14.curve.json: variant=far slot=blocks.0.gate seed=14 w1_vs_original=15.147401338398087 d_Bval_50_100=0.239156; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/gateB0_far_s15.curve.json",
+   "sha256": "2e552095c737328f0a4410d1ac65b0fbe18a2a899716f9a9f184bb1266534e76",
+   "bytes": 1652,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve gateB0_far_s15.curve.json: variant=far slot=blocks.0.gate seed=15 w1_vs_original=14.749646150260467 d_Bval_50_100=0.21927; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/gateB0_iso_s13.curve.json",
+   "sha256": "3c0d1dd5ad702ecad8676c7a70d353640f1e67db19ae118aa8665f89dc82f96a",
+   "bytes": 1654,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve gateB0_iso_s13.curve.json: variant=iso slot=blocks.0.gate seed=13 w1_vs_original=5.146851445037015e-09 d_Bval_50_100=0.255531; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/gateB0_iso_s14.curve.json",
+   "sha256": "fb8b14687b43f35fafe9bd02c350d776e25339f2cac77f5baa9d7b5607b5d4e9",
+   "bytes": 1657,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve gateB0_iso_s14.curve.json: variant=iso slot=blocks.0.gate seed=14 w1_vs_original=1.9991015509646104e-09 d_Bval_50_100=0.243689; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/gateB0_iso_s15.curve.json",
+   "sha256": "858e0aa07eea512a64a5f4412adf152bf37601011891161a99bc02f89525c60c",
+   "bytes": 1655,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve gateB0_iso_s15.curve.json: variant=iso slot=blocks.0.gate seed=15 w1_vs_original=4.123237397346546e-09 d_Bval_50_100=0.227017; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/qB0_A_s13.curve.json",
+   "sha256": "9612c693296118fa9dcce5fe769284c71e210eb3c4884ba847d8366a239975a1",
+   "bytes": 1631,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve qB0_A_s13.curve.json: variant=A slot=blocks.0.q seed=13 w1_vs_original=None d_Bval_50_100=0.251344; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/qB0_A_s14.curve.json",
+   "sha256": "310cfd7794fd86185c1b4bc44b1410a0080332f0057a492e56d0b3258021f04e",
+   "bytes": 1630,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve qB0_A_s14.curve.json: variant=A slot=blocks.0.q seed=14 w1_vs_original=None d_Bval_50_100=0.219174; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/qB0_A_s15.curve.json",
+   "sha256": "1cb851fa0dde09b6dc9da54fbd3e3b40600e4a2afcb72853150bac3edbacfcfa",
+   "bytes": 1635,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve qB0_A_s15.curve.json: variant=A slot=blocks.0.q seed=15 w1_vs_original=None d_Bval_50_100=0.222782; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/qB0_far_s13.curve.json",
+   "sha256": "de8c7831bd5afb07d1824bf21d03acfe8d5586c7fc90495567839e178fcfcd8f",
+   "bytes": 1643,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve qB0_far_s13.curve.json: variant=far slot=blocks.0.q seed=13 w1_vs_original=7.159940483286606 d_Bval_50_100=0.476875; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/qB0_far_s14.curve.json",
+   "sha256": "cf9965e073959889e3aad312feaaadd4ac93592b7ecbea161a22c375b33fa128",
+   "bytes": 1643,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve qB0_far_s14.curve.json: variant=far slot=blocks.0.q seed=14 w1_vs_original=6.154602326893998 d_Bval_50_100=0.384814; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/qB0_far_s15.curve.json",
+   "sha256": "85ccb21cb78b874e9cfa5cf251c365225dfd5924515c6b8beac2bfb0596a533e",
+   "bytes": 1641,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve qB0_far_s15.curve.json: variant=far slot=blocks.0.q seed=15 w1_vs_original=6.404768901186369 d_Bval_50_100=0.411876; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/qB0_iso_s13.curve.json",
+   "sha256": "f48d9a14d5637610303e6dea49410a5cf4416573822b6eee29eade7a7aa2cdcc",
+   "bytes": 1649,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve qB0_iso_s13.curve.json: variant=iso slot=blocks.0.q seed=13 w1_vs_original=9.076548727893208e-09 d_Bval_50_100=0.395681; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/qB0_iso_s14.curve.json",
+   "sha256": "64c920eac2c14838db7f8a24c35b6b87d0094f636fc25491582eb8aef1f1abe2",
+   "bytes": 1644,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve qB0_iso_s14.curve.json: variant=iso slot=blocks.0.q seed=14 w1_vs_original=5.09323039299403e-09 d_Bval_50_100=0.371826; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3/qB0_iso_s15.curve.json",
+   "sha256": "63369433f805037c2b09f21079d81096a33d82d3299ce2e970b767b778ee651d",
+   "bytes": 1649,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 arm curve qB0_iso_s15.curve.json: variant=iso slot=blocks.0.q seed=15 w1_vs_original=6.580528483235426e-09 d_Bval_50_100=0.358301; run-8, one writer, never overwritten"
+  },
+  {
+   "path": "artifacts/results/C3_verdict.json",
+   "sha256": "cc1f4bf68abdfaf74a09c7bd04a0a804f4b7a352c2d7e0cba92b7ce7ec0034f6",
+   "bytes": 2537,
+   "source": "C3 constructive-isospectrality grid run-8 (rig MEF@382e438a imported, corpus=fallback loaf, machine A); base trained on mps, spectrum read on cpu-float64 AFTER the move-then-cast fix",
+   "obtained": "2026-09-15",
+   "by": "cora@bb84f97 (session Κ-hand-016, human's 「so go」 after the 12:41 abort)",
+   "script": "experiments/c3_isospectral.py@bb84f97",
+   "notes": "C3 VERDICT: 9/9 violations, far-agrees 2/9, branch='shape NOT the carrier (C1 obituary sentence executes, constructive regime)' — registered conjunction fails: shape NOT the carrier at this scale; band 0.003158 live-verified 4-way at runtime"
   }
  ]
 }

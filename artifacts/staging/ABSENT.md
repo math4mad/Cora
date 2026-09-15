@@ -42,3 +42,9 @@ from the moved batch; this hand refuses to decide which from timestamps alone, a
 silently striking the line. The same off-by-one shape may thread earlier receipts (run-4's "2 orphans" has
 1 file on disk); none of these bytes is citable in any direction, so the debt is booked, not paid around.
 rejected/C3-run7-ridgefail/  # 1 orphan (qB0 A s13 of run-7, d=0.259979, mtime 13:37) — run died at arm 2 when the ridge-fallback ITSELF threw code 191 on gram_spec(source W); grid rejected whole, instrument hardened before restart
+runs/C3-r1/smoke/            # run-8's 20-step smoke base (price gate): reproducible from experiments/c3_isospectral.py@bb84f97, rig MEF@382e438a, SEED=13, fallback loaf; prices the grid, cites nothing — the science lives in results/C3 (28 pinned twins)
+runs/C3-r1/base_s13/         # run-8 per-seed base ladder + eval tensors + arm stdout logs (s13/s14/s15 dirs likewise): reproducible (script@bb84f97, SEED=t, fallback corpus; consumption meta inside corpus_meta.json, also embedded in every pinned curve); law 6 keeps the multi-MB .pt out of git
+runs/C3-r1/base_s14/         # "
+runs/C3-r1/base_s15/         # "
+runs/C3-r1/run7.log          # stdout of the ABORTED run-7 (died at arm 2 pre-fix): reproducible refusal-by-crash — kept because it carries the code-191 traceback that named the root cause
+runs/C3-r1/run8.log          # stdout of the scoring run-8: reproducible from script@bb84f97; gates, 3× pre-validation lines, 27 arm lines, verdict line

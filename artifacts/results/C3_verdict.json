@@ -1,0 +1,132 @@
+{
+ "run": "C3-r1",
+ "band_nats": 0.003158,
+ "band_source": "artifacts/results/D1-C1band_band.json (4-way at runtime)",
+ "cells": [
+  {
+   "slot": "qB0",
+   "seed": 13,
+   "d_A": 0.251344,
+   "d_iso": 0.395681,
+   "d_far": 0.476875,
+   "diff_iso": 0.144337,
+   "iso_within_band": false,
+   "diff_far": 0.225531,
+   "far_within_band": false
+  },
+  {
+   "slot": "qB0",
+   "seed": 14,
+   "d_A": 0.219174,
+   "d_iso": 0.371826,
+   "d_far": 0.384814,
+   "diff_iso": 0.152652,
+   "iso_within_band": false,
+   "diff_far": 0.16564,
+   "far_within_band": false
+  },
+  {
+   "slot": "qB0",
+   "seed": 15,
+   "d_A": 0.222782,
+   "d_iso": 0.358301,
+   "d_far": 0.411876,
+   "diff_iso": 0.135519,
+   "iso_within_band": false,
+   "diff_far": 0.189094,
+   "far_within_band": false
+  },
+  {
+   "slot": "gateB0",
+   "seed": 13,
+   "d_A": 0.250675,
+   "d_iso": 0.255531,
+   "d_far": 0.253991,
+   "diff_iso": 0.004856,
+   "iso_within_band": false,
+   "diff_far": 0.003316,
+   "far_within_band": false
+  },
+  {
+   "slot": "gateB0",
+   "seed": 14,
+   "d_A": 0.217902,
+   "d_iso": 0.243689,
+   "d_far": 0.239156,
+   "diff_iso": 0.025787,
+   "iso_within_band": false,
+   "diff_far": 0.021254,
+   "far_within_band": false
+  },
+  {
+   "slot": "gateB0",
+   "seed": 15,
+   "d_A": 0.222239,
+   "d_iso": 0.227017,
+   "d_far": 0.21927,
+   "diff_iso": 0.004778,
+   "iso_within_band": false,
+   "diff_far": 0.002969,
+   "far_within_band": true
+  },
+  {
+   "slot": "downB1",
+   "seed": 13,
+   "d_A": 0.250948,
+   "d_iso": 0.25434,
+   "d_far": 0.253946,
+   "diff_iso": 0.003392,
+   "iso_within_band": false,
+   "diff_far": 0.002998,
+   "far_within_band": true
+  },
+  {
+   "slot": "downB1",
+   "seed": 14,
+   "d_A": 0.216183,
+   "d_iso": 0.211016,
+   "d_far": 0.207157,
+   "diff_iso": 0.005167,
+   "iso_within_band": false,
+   "diff_far": 0.009026,
+   "far_within_band": false
+  },
+  {
+   "slot": "downB1",
+   "seed": 15,
+   "d_A": 0.222342,
+   "d_iso": 0.229772,
+   "d_far": 0.217464,
+   "diff_iso": 0.00743,
+   "iso_within_band": false,
+   "diff_far": 0.004878,
+   "far_within_band": false
+  }
+ ],
+ "n_cells": 9,
+ "violations": 9,
+ "far_within_band_count": 2,
+ "conjunction_score": false,
+ "obituary_branch": "shape NOT the carrier (C1 obituary sentence executes, constructive regime)",
+ "wall_s": 1545.8,
+ "rig": "MEF@382e438a76669b6e49ce9663302d10025a6922f0",
+ "seeds": [
+  13,
+  14,
+  15
+ ],
+ "construction_gseeds": {
+  "qB0": {
+   "iso": 7001,
+   "far": 8001
+  },
+  "gateB0": {
+   "iso": 7002,
+   "far": 8002
+  },
+  "downB1": {
+   "iso": 7003,
+   "far": 8003
+  }
+ }
+}
