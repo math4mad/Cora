@@ -308,3 +308,9 @@ geometries, same construction gseeds; the entry stands as the science, this line
 addresses the code navigates. The crash that found it orphaned one A-arm curve, sequestered whole
 (`artifacts/staging/rejected/C3-run1-pathcrash/`, receipted in ABSENT.md) - a partial grid is a
 partial grid, and reruns start from smoke.
+
+**C3 construction widening (append-only, same day):** the far-arm stretch lever moves from exp(±1.5)
+to exp(±2.5) after probe showed the m<n slot (down, 192x512) landing at W1=0.50 - exactly on the
+registered floor, one rounding from a mid-grid construction abort. The ENTRY's claim ("far arms,
+W1 >= 0.5 by construction") is untouched: the lever is internal engineering, the guarantee is the
+registered word, and the runtime assertion now demands >= 1.0 (2x margin) before any arm is admitted.

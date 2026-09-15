@@ -69,8 +69,8 @@ def surrogate(W, gs, stretch=None):
     g = torch.Generator(device="cpu").manual_seed(gs)
     Q1, _ = torch.linalg.qr(torch.randn(m_, m_, generator=g, dtype=torch.float64))
     Q2, _ = torch.linalg.qr(torch.randn(n_, n_, generator=g, dtype=torch.float64))
-    S2 = S * torch.exp(torch.linspace(-1.5, 1.5, k_, dtype=torch.float64)) if stretch else S
-    B = (Q1[:, :k_] * S2) @ Q2.T
+    S2 = S * torch.exp(torch.linspace(-2.5, 2.5, k_, dtype=torch.float64)) if stretch else S
+    B = (Q1[:, :k_] * S2) @ Q2[:, :k_].T   # right frame: n x k (k first QR columns, transposed) — works both m>n (q/gate) and m<n (down); probe-verified on a transposed-shape matrix this time
     s0 = np.linalg.svd(Wd.numpy(), compute_uv=False); s1 = np.linalg.svd(B.numpy(), compute_uv=False)
     return B, w1(spec128(s0), spec128(s1))
 
@@ -106,7 +106,7 @@ def run_arm(base_out, t, slot_key, variant):
         gs = giso if variant == "iso" else gfar
         Bw, dist = surrogate(W, gs, stretch=(variant == "far"))
         tol = 1e-8 * float(W.detach().to("cpu").abs().max())      # RELATIVE tolerance: float32 weights on mps, float64 linalg — the assertion keeps its teeth (far must still clear 0.5) without tripping on fp noise
-        if variant == "far" and dist < 0.5: sys.exit(f"[c3] CONSTRUCTION FAILURE: far arm W1={dist} < 0.5; abort")
+        if variant == "far" and dist < 1.0: sys.exit(f"[c3] CONSTRUCTION FAILURE: far arm W1={dist} < 0.5; abort")
         w1_note = dist
         with torch.no_grad(): obj.weight.copy_(Bw.to(obj.weight.dtype))
     tagged = rig.lora_targets(model, 8)

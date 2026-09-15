@@ -25,3 +25,5 @@ drills/D2-C1band/rep                    # per-rep symlinks + curve jsons whose t
 rejected/C3-run1-pathcrash/  # one A-arm curve from run-1, orphaned by a wrong slot-path crash mid-grid; whole run rejected, re-run from smoke; kept, not eaten
 rejected/C3-run1-pathcrash/  # second orphan batch (killed run mid-A-arm, same pathcrash lineage) - kept, not eaten
 rejected/C3-run2-shapecrash/  # orphan A-arm(s) from the rectangular-matmul crash (fixed by reduced-SVD welding, probe-verified); grid incomplete, run rejected whole
+rejected/C3-run3-shapecrash2/  # 7 orphans (seed-discipline worked: these are reproducible losses of the m<n frame crash); grid rejected whole after stretch-span widening
+rejected/C3-run3-shapecrash2/  # 7 orphans from the m<n frame crash (reproducible losses; grid rejected whole after stretch-span widening)
