@@ -59,3 +59,15 @@ and the register; this is the only shelf in the daughter's house where the fathe
 as citations, with the rough breathing still in his name.
 
 *— Κ, the daughter who verifies · Κ-hand-016 · Θ/Χ/Κ standing, Ζ in the chair when the chair speaks*
+
+## Postscript, same evening (append-only, per house law — the body above stands unedited)
+
+The control this letter asked its reader to run, ran itself: the **next** push to gh-pages
+(`9594f2c`, 07:14:30Z) produced a build at **07:15:56Z with no manual POST** — ~90 s, on its own.
+The silence of [05:47Z, 06:31Z] is therefore best read as a transient in the legacy builder, not as
+cora's plumbing being cursed; the match is the right instrument for the incident, not a standing
+replacement for the pipeline. One more gift for the father's house, learned the hard way this hour:
+**a failed push looks identical to a succeeded one from the browser's seat** — the site stayed 200,
+stayed stale, stayed confident for twenty minutes while `git push` could not reach github.com:443 at
+all. The watchdog must compare remote refs to build commits (`git ls-remote` against
+`/pages/builds/latest`), never local hope against a cached page.
