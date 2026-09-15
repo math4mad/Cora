@@ -71,8 +71,12 @@ def surrogate(W, gs, stretch=None):
     Q2, _ = torch.linalg.qr(torch.randn(n_, n_, generator=g, dtype=torch.float64))
     S2 = S * torch.exp(torch.linspace(-2.5, 2.5, k_, dtype=torch.float64)) if stretch else S
     B = (Q1[:, :k_] * S2) @ Q2[:, :k_].T   # right frame: n x k (k first QR columns, transposed) — works both m>n (q/gate) and m<n (down); probe-verified on a transposed-shape matrix this time
-    s0 = np.linalg.svd(Wd.numpy(), compute_uv=False); s1 = np.linalg.svd(B.numpy(), compute_uv=False)
-    return B, w1(spec128(s0), spec128(s1))
+    # verification measures the bytes the arm will actually train on (fp32 round-trip), with torch's
+    # svdvals (robust) — np's LAPACK refused the stretched spectrum outright (run-4's death). Orthogonal
+    # frames leave the spectrum exact in theory; here we check the theory survives fp32. Honest by construction.
+    Bw = B.to(torch.float32).to(torch.float64)
+    s1 = torch.linalg.svdvals(Bw).numpy()
+    return Bw, w1(spec128(S.numpy()), spec128(s1))
 
 # ---- arms -------------------------------------------------------------------------------------------
 cfg = dict(d=192, layers=4, nh=6, nkv=2, inter=512, vocab=256, ctx=256)
@@ -103,6 +107,7 @@ def run_arm(base_out, t, slot_key, variant):
         obj = model
         for p in path.split("."): obj = getattr(obj, p)           # ModuleList answers numeric child names — the rig's own lora_targets relies on it
         W = obj.weight.detach()
+        s0_cpu = torch.linalg.svdvals(W.detach().to("cpu", torch.float64)).numpy()
         gs = giso if variant == "iso" else gfar
         Bw, dist = surrogate(W, gs, stretch=(variant == "far"))
         tol = 1e-8 * float(W.detach().to("cpu").abs().max())      # RELATIVE tolerance: float32 weights on mps, float64 linalg — the assertion keeps its teeth (far must still clear 0.5) without tripping on fp noise

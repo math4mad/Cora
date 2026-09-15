@@ -27,3 +27,4 @@ rejected/C3-run1-pathcrash/  # second orphan batch (killed run mid-A-arm, same p
 rejected/C3-run2-shapecrash/  # orphan A-arm(s) from the rectangular-matmul crash (fixed by reduced-SVD welding, probe-verified); grid incomplete, run rejected whole
 rejected/C3-run3-shapecrash2/  # 7 orphans (seed-discipline worked: these are reproducible losses of the m<n frame crash); grid rejected whole after stretch-span widening
 rejected/C3-run3-shapecrash2/  # 7 orphans from the m<n frame crash (reproducible losses; grid rejected whole after stretch-span widening)
+rejected/C3-run4-lapackcrash/  # 2 orphans (A+iso qB0/s13) — run died in the VERIFICATION lapack call, not in science; whole grid restarted after swapping verification to torch-on-fp32
