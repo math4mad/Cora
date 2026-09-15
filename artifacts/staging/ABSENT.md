@@ -30,3 +30,14 @@ rejected/C3-run3-shapecrash2/  # 7 orphans from the m<n frame crash (reproducibl
 rejected/C3-run4-lapackcrash/  # 2 orphans (A+iso qB0/s13) — run died in the VERIFICATION lapack call, not in science; whole grid restarted after swapping verification to torch-on-fp32
 rejected/C3-run5-lapackcrash2/  # 1 orphan (A arm qB0/s13 of run-5); LAPACK gesdd knife-edge — construction moved to Gram-eigvalsh spectrum (vectors never needed); whole grid restarted
 rejected/C3-run6-eighcrash/  # 5 orphans from the eigvalsh-knife-edge run (qB0 full cell incl. first iso/far numbers; gateB0 A+iso) - all replaced by run-7 construction-stable grid
+
+**Sequestration erratum (append-only, 2026-09-15, Κ-hand-016, found in the post-abort audit):** the receipt
+line for `rejected/C3-run6-eighcrash/` (5 orphans) was true of the batch but false of its address — at audit
+the directory held ZERO files, and the five curves matching its description exactly (qB0 A/iso/far + gateB0
+A/iso, mtimes 12:07:51–12:11:10, sha-prefixes c3925346… a927ec40… 8cc24022… aa5c43d1… f8801859…) sat under
+`rejected/C3-run5-lapackcrash2/`. The batch was moved to its receipted home at 13:34, mtimes untouched, no
+bytes rewritten. `C3-run5-lapackcrash2/` now stands empty: its receipt (1 orphan, qB0 A s13) is kept as a
+debt — the arm died in verification before its curve was ever written, or its bytes are indistinguishable
+from the moved batch; this hand refuses to decide which from timestamps alone, and says so instead of
+silently striking the line. The same off-by-one shape may thread earlier receipts (run-4's "2 orphans" has
+1 file on disk); none of these bytes is citable in any direction, so the debt is booked, not paid around.
