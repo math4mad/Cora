@@ -67,9 +67,20 @@ def surrogate(W, gs, stretch=None):
     # where LAPACK gesdd refuses to converge (runs 4-5 died on the same q-matrix's knife edge: the base
     # itself trains non-deterministically at fp-noise level, so "the same matrix" is a lie between runs).
     def gram_spec(X):
+        # Gram on the small side + eigvalsh, with DETERMINISTIC RIDGE fallback: near-zero fp32 noise
+        # sigmas squared give condition numbers beyond float64, where even heevd refuses repeated
+        # eigenvalues (run-6, code 191). A ridge of eps*mean(G) shifts the whole spectrum by ~1e-16
+        # relative — immaterial to a normalized-spectrum W1 (the zero-cluster it "resolves" carries
+        # ~1e-14 of the mass), material to convergence. Honest, documented, deterministic.
         m2, n2 = X.shape
         G = (X.T @ X) if m2 >= n2 else (X @ X.T)
-        return torch.flip(torch.linalg.eigvalsh(G).clamp_min(0).sqrt(), [0])
+        try:
+            ev = torch.linalg.eigvalsh(G)
+        except Exception:
+            r = float(torch.diagonal(G).mean()) * 1e-13
+            ev = torch.linalg.eigvalsh(G + r * torch.eye(G.shape[0], dtype=G.dtype))
+            print(f"[c3] ridge-fallback engaged (shift {r:.3e}) — noise-floor degeneracy, documented in the register")
+        return torch.flip(ev.clamp_min(0).sqrt(), [0])
     S = gram_spec(Wd)
     m_, n_, k_ = Wd.shape[0], Wd.shape[1], S.numel()
     g = torch.Generator(device="cpu").manual_seed(gs)
