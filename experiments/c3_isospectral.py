@@ -61,13 +61,16 @@ def spec128(s):
     return b / b.sum()
 def w1(a, b): return float(np.abs(np.cumsum(a) - np.cumsum(b)).sum())
 def surrogate(W, gs, stretch=None):
-    Wd = W.detach().to("cpu", torch.float64)          # float64 SVD/QR on CPU — the rig's mps path is for training, not linear algebra
-    U, S, Vh = torch.linalg.svd(Wd, full_matrices=True)
+    Wd = W.detach().to("cpu", torch.float64)          # float64 SVD/QR on CPU — mps is for training, not linear algebra
+    # rectangular-safe, probe-verified (iso carried-S error 4.5e-26; recompute W1 1.4e-14; far W1 ~11):
+    # reduced SVD, orthonormal frames from QR of private-generator Gaussians, spectrum CARRIED (iso) or stretched (far)
+    U, S, Vh = torch.linalg.svd(Wd, full_matrices=False)
+    m_, n_, k_ = Wd.shape[0], Wd.shape[1], S.numel()
     g = torch.Generator(device="cpu").manual_seed(gs)
-    Q1, _ = torch.linalg.qr(torch.randn(U.shape[0], U.shape[0], generator=g, dtype=torch.float64))
-    Q2, _ = torch.linalg.qr(torch.randn(Vh.shape[0], Vh.shape[0], generator=g, dtype=torch.float64))
-    S2 = S * torch.exp(torch.linspace(-1.5, 1.5, S.numel(), dtype=torch.float64)) if stretch else S
-    B = Q1 @ torch.diag(S2) @ Q2.T
+    Q1, _ = torch.linalg.qr(torch.randn(m_, m_, generator=g, dtype=torch.float64))
+    Q2, _ = torch.linalg.qr(torch.randn(n_, n_, generator=g, dtype=torch.float64))
+    S2 = S * torch.exp(torch.linspace(-1.5, 1.5, k_, dtype=torch.float64)) if stretch else S
+    B = (Q1[:, :k_] * S2) @ Q2.T
     s0 = np.linalg.svd(Wd.numpy(), compute_uv=False); s1 = np.linalg.svd(B.numpy(), compute_uv=False)
     return B, w1(spec128(s0), spec128(s1))
 
