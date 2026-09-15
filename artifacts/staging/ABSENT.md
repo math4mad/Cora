@@ -22,3 +22,4 @@ drills/D2-C1band/base_run.json          # treasure-corpus base ladder: reproduci
 drills/D2-C1band/ckpt_                  # ladder checkpoints (prefix line)
 drills/D2-C1band/eval_                  # eval tensors from the same base
 drills/D2-C1band/rep                    # per-rep symlinks + curve jsons whose twins are pinned above
+rejected/C3-run1-pathcrash/  # one A-arm curve from run-1, orphaned by a wrong slot-path crash mid-grid; whole run rejected, re-run from smoke; kept, not eaten
